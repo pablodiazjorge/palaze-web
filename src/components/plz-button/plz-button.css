@@ -1,0 +1,36 @@
+:host {
+  /* Fonts */
+  --plz-font-primary: Verdana, Geneva, Tahoma, sans-serif;
+  --plz-font-weight-m-bold: 500;
+  --plz-font-size-medium: 1rem;
+  --plz-line-height-normal: 1.8;
+
+  /* Border radius */
+  --plz-border-radius-low: 0.25rem;
+
+  /* Colors */
+  --plz-color-black-strong: black;
+  --plz-color-black-low: #d4d4d8;
+  --plz-color-white: white;
+  --plz-color-azul-strong: #023E8A;
+  --plz-color-azul-low: #CAF0F8;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--plz-color-white);
+  color: var(--plz-color-black-strong);
+  border-radius: var(--plz-border-radius-low);
+  border: 1px solid var(--plz-color-black-low);
+  font-family: var(--plz-font-primary);
+  font-weight: var(--plz-font-weight-m-bold);
+  line-height: var(--plz-line-height-normal);
+  padding: 2px 8px;
+}
+
+button:hover {
+  background-color: var(--plz-color-azul-low);
+  color: var(--plz-color-azul-strong);
+}

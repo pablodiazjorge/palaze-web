@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  --plz-color-black-strong: black;
+  --plz-color-black-mid-trong: #212529;
+}
+
+.option-li {
+  height: 20px;
+  width: 100%;
+  padding: 7px;
+  cursor: pointer;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: var(--plz-color-black-strong);
+  text-decoration: none;
+}

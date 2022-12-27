@@ -1,0 +1,21 @@
+:host {
+  --plz-color-black-very-low: #F8F9FA;
+  --plz-color-black-low: #d4d4d8;
+  --plz-color-white: white;
+
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid var(--plz-color-black-low);
+}
+
+div {
+  background-color: var(--plz-color-white);
+  box-sizing: border-box;
+  border-right: 2px solid var(--plz-color-black-low);
+  padding: 10px;
+  width: 100%;
+  min-width: 33%;
+  max-width: 100%;
+  resize: horizontal;
+  overflow: auto;
+}

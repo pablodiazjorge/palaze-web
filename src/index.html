@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Palaze</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<style>
+    .main {
+        padding-top: 40px;
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        transition: all 0.3s;
+    }
+
+    .sidebar {
+        background-color: white;
+        height: 100%;
+        width: 0%;
+        position: absolute;
+        overflow: hidden;
+        transition-property: width;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    .sectionmain {
+        padding-top: 40px;
+        position: fixed;
+        left: 20%;
+        right: 20%;
+        transition: all 0.3s;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .button-sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        border: none;
+        padding: 6px 6px;
+        font-size: 28px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .button-sidebar:active {
+        color: gray;
+    }
+</style>
+
+<script>
+    var toggled = true;
+    function toggle() {
+        if (toggled === false) {
+            toggled = true;
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("main").style.left = "20%";
+        } else if (toggled === true) {
+            toggled = false;
+            document.getElementById("sidebar").style.width = "15%";
+            document.getElementById("main").style.left = "30%";
+        }
+    }
+</script>
+
+<body>
+
+    <!--  Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <plz-menu>
+            <plz-menu-item>Acerca de</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item>Uno</plz-menu-item>
+            <plz-menu-item>Dos</plz-menu-item>
+            <plz-menu-item>Tres</plz-menu-item>
+            <plz-menu-item>Cuatro</plz-menu-item>
+            <plz-menu-item>Cinco</plz-menu-item>
+        </plz-menu>
+    </nav>
+
+    <button class="button-sidebar" onclick="toggle()">&#9776</button>
+
+    <!-- Main section -->
+    <section id="main" class="main">
+        <h2>plz-button</h2>
+        <plz-showcase>
+            <plz-showcase-render>
+                <plz-button>Press me</plz-button>
+            </plz-showcase-render>
+            <plz-showcase-code text-code='<plz-button>
+          Press me
+<plz-button>'>
+            </plz-showcase-code>
+        </plz-showcase>
+
+        <br />
+        <br />
+
+        <h2>plz-divider</h2>
+        <plz-showcase>
+            <plz-showcase-render>
+                <plz-divider></plz-divider>
+            </plz-showcase-render>
+            <plz-showcase-code text-code='<plz-divider><plz-divider>'></plz-showcase-code>
+        </plz-showcase>
+
+        <br />
+        <br />
+
+        <h2>plz-spinner</h2>
+        <plz-showcase>
+            <plz-showcase-render>
+                <plz-spinner></plz-spinner>
+            </plz-showcase-render>
+            <plz-showcase-code text-code="<plz-spinner></plz-spinner>"></plz-showcase-code>
+        </plz-showcase>
+
+        <br />
+        <br />
+
+        <h2>plz-showcase</h2>
+        <h4>plz-showcase-render / plz-showcase-code</h4>
+        <plz-showcase>
+            <plz-showcase-render>
+                <plz-showcase>
+                    <plz-showcase-render>
+                        <plz-spinner></plz-spinner>
+                    </plz-showcase-render>
+                    <plz-showcase-code text-code='<plz-spinner><plz-spinner>'></plz-showcase-code>
+                </plz-showcase>
+            </plz-showcase-render>
+            <plz-showcase-code text-code='<plz-showcase>
+      <plz-showcase-render>
+            <plz-spinner></plz-spinner>
+      </plz-showcase-render>
+      <plz-showcase-code text-code="<plz-spinner><plz-spinner>"></plz-showcase-code>
+</plz-showcase>'></plz-showcase-code>
+        </plz-showcase>
+
+        <br />
+        <br />
+    </section>
+
+</body>
+
+</html>

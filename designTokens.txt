@@ -1,0 +1,67 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TIPOGRAFIA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#   Font family (Fuente principal Verdana, las demás son por si fallara Verdana)
+
+--plz-font-primary: Verdana, Geneva, Tahoma, sans-serif;
+
+#   Font weight
+
+--plz-font-weight-light: 300;
+--plz-font-weight-normal: 400;
+--plz-font-weight-m-bold: 500;
+--plz-font-weight-bold: 700;
+
+#   Font size
+
+--plz-font-size-small: 0.875rem; /* (14px) */
+--plz-font-size-medium: 1rem; /* (16px) */
+--plz-font-size-big: 2.25rem; /* (36px) */
+--plz-font-size-titles: 3rem; /* (48px) */
+
+#   Line height
+
+--plz-line-height-low: 1.4;
+--plz-line-height-normal: 1.8;
+--plz-line-height-big 2.4;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COLORES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#   Primarios-gamma-azul
+
+--plz-color-blue-strong: #023E8A;
+--plz-color-blue-mid: #0077B6;
+--plz-color-blue-mid-low: #0096C7;
+--plz-color-blue-low: #CAF0F8;
+
+#   Primarios-gamma-verde
+
+--plz-color-green-strong: #081C15;
+--plz-color-green-mid-strong: #1B4332;
+--plz-color-green-mid: #52B788;
+--plz-color-green-low: #D8F3DC;
+
+#   Primarios-gamma-rojo
+
+--plz-color-red-strong: #A4133C;
+--plz-color-red-mid: #FF4D6D;
+--plz-color-red-mid-low: #FFB3C1;
+--plz-color-red-low: #FFF0F3;
+
+#   Primarios-gamma-negro
+
+--plz-color-black-strong: black;
+--plz-color-black-mid-trong: #212529;
+--plz-color-black-mid: #495057;
+--plz-color-black-low: #d4d4d8;
+--plz-color-black-very-low: #F8F9FA;
+--plz-color-white: white;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BORDER RADIUS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--plz-border-radius-circle: 50%;
+--plz-border-radius-rounded: 9999px;
+--plz-border-radius-moderate:1rem; /* 16px */
+--plz-border-radius-low: 0.25rem; /* 4px */

@@ -1,0 +1,8 @@
+:host {
+  --plz-color-black-very-low: #F8F9FA;
+}
+
+.showcase {
+  display: block;
+  background-color: var(--plz-color-black-very-low);
+}

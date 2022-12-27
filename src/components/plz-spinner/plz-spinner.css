@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  --plz-color-black-low: #d4d4d8;
+  --plz-color-blue-strong: #023E8A;
+  --plz-color-blue-low: #CAF0F8;
+}
+
+.spinner {
+  border: 10px solid var(--plz-color-blue-low);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.spin {
+  border-left: 5px solid var(--plz-color-blue-strong);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: girar 1.5s ease-in-out infinite;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,44 @@
+.main {
+    padding-top: 40px;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    transition: all 0.3s;
+}
+
+.sidebar {
+    background-color: white;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    overflow: hidden;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.sectionmain {
+    padding-top: 40px;
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    transition: all 0.3s;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.button-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border: none;
+    padding: 6px 6px;
+    font-size: 28px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-sidebar:active {
+    color: gray;
+}
