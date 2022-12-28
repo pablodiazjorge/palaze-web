@@ -2,6 +2,10 @@
   display: block;
   --plz-color-black-strong: black;
   --plz-color-black-mid-trong: #212529;
+  --plz-font-size-medium: 1rem;
+  /* (16px) */
+  --plz-font-size-big: 2.25rem;
+  /* (36px) */
 }
 
 .option-li {
@@ -10,13 +14,15 @@
   padding: 7px;
   cursor: pointer;
   list-style: none;
+  font-size: var(--plz-font-size-medium);
 }
 
 a {
   text-decoration: none;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: var(--plz-color-black-strong);
   text-decoration: none;
 }

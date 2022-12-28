@@ -4,57 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Palaze</title>
-    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="/build/palaze-web.css">
     <script type="module" src="/build/palaze-web.esm.js"></script>
     <script nomodule src="/build/palaze-web.js"></script>
 </head>
-
-<style>
-    .main {
-        padding-top: 40px;
-        position: absolute;
-        left: 20%;
-        right: 20%;
-        transition: all 0.3s;
-    }
-
-    .sidebar {
-        background-color: white;
-        height: 100%;
-        width: 0%;
-        position: absolute;
-        overflow: hidden;
-        transition-property: width;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-    }
-
-    .sectionmain {
-        padding-top: 40px;
-        position: fixed;
-        left: 20%;
-        right: 20%;
-        transition: all 0.3s;
-        font-size: 20px;
-        text-align: justify;
-    }
-
-    .button-sidebar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: white;
-        border: none;
-        padding: 6px 6px;
-        font-size: 28px;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .button-sidebar:active {
-        color: gray;
-    }
-</style>
 
 <script>
     var toggled = true;
