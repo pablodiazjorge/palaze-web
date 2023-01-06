@@ -6,6 +6,7 @@
 }
 
 .divider {
+  margin: 0;
   border: 0;
   height: 0;
   padding-top: 4px;
