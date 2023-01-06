@@ -32,5 +32,6 @@ button {
 
 button:hover {
   background-color: var(--plz-color-azul-low);
+  cursor: pointer;
   color: var(--plz-color-azul-strong);
 }
