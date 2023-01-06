@@ -2,27 +2,49 @@
   display: block;
   --plz-color-black-strong: black;
   --plz-color-black-mid-trong: #212529;
+  --plz-color-blue-mid: #0077B6;
+  --plz-color-blue-low: #CAF0F8;
   --plz-font-size-medium: 1rem;
   /* (16px) */
   --plz-font-size-big: 2.25rem;
   /* (36px) */
 }
 
-.option-li {
+li {
+  padding: 0;
+}
+
+li a {
+  display: block;
+}
+
+li {
   height: 20px;
   width: 100%;
   padding: 7px;
   cursor: pointer;
   list-style: none;
-  font-size: var(--plz-font-size-medium);
+}
+
+li:hover {
+  border-radius: 20px;
+  background-color: var(--plz-color-blue-low);
+  color: var(--plz-color-blue-mid);
 }
 
 a {
+  width: inherit;
+  min-width: 100%;
   text-decoration: none;
+  font-size: 20px;
+  color: var(--plz-color-black-strong);
+}
+
+a:hover {
+  color: var(--plz-color-blue-mid);
 }
 
 a:link,
 a:visited {
-  color: var(--plz-color-black-strong);
   text-decoration: none;
 }

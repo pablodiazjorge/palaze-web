@@ -11,7 +11,7 @@ export class PlzMenuItem {
 
   render() {
     return (
-      <li class="option-li">
+      <li>
         <a href={this.link}>
           <slot></slot>
         </a>
