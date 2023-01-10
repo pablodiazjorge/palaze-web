@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.hero {
+  box-sizing: border-box;
+  height: 400px;
+}
+
+.grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+}
+
+.logo-palaze {
+  height: 100%;
+  width: 100%;
+}
+
+.small-content {
+  height: 100%;
+  width: 100%;
+}

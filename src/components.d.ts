@@ -10,6 +10,12 @@ export namespace Components {
     }
     interface PlzDivider {
     }
+    interface PlzHero {
+    }
+    interface PlzHeroContent {
+    }
+    interface PlzHeroLogo {
+    }
     interface PlzMenu {
     }
     interface PlzMenuItem {
@@ -37,6 +43,24 @@ declare global {
     var HTMLPlzDividerElement: {
         prototype: HTMLPlzDividerElement;
         new (): HTMLPlzDividerElement;
+    };
+    interface HTMLPlzHeroElement extends Components.PlzHero, HTMLStencilElement {
+    }
+    var HTMLPlzHeroElement: {
+        prototype: HTMLPlzHeroElement;
+        new (): HTMLPlzHeroElement;
+    };
+    interface HTMLPlzHeroContentElement extends Components.PlzHeroContent, HTMLStencilElement {
+    }
+    var HTMLPlzHeroContentElement: {
+        prototype: HTMLPlzHeroContentElement;
+        new (): HTMLPlzHeroContentElement;
+    };
+    interface HTMLPlzHeroLogoElement extends Components.PlzHeroLogo, HTMLStencilElement {
+    }
+    var HTMLPlzHeroLogoElement: {
+        prototype: HTMLPlzHeroLogoElement;
+        new (): HTMLPlzHeroLogoElement;
     };
     interface HTMLPlzMenuElement extends Components.PlzMenu, HTMLStencilElement {
     }
@@ -77,6 +101,9 @@ declare global {
     interface HTMLElementTagNameMap {
         "plz-button": HTMLPlzButtonElement;
         "plz-divider": HTMLPlzDividerElement;
+        "plz-hero": HTMLPlzHeroElement;
+        "plz-hero-content": HTMLPlzHeroContentElement;
+        "plz-hero-logo": HTMLPlzHeroLogoElement;
         "plz-menu": HTMLPlzMenuElement;
         "plz-menu-item": HTMLPlzMenuItemElement;
         "plz-showcase": HTMLPlzShowcaseElement;
@@ -89,6 +116,12 @@ declare namespace LocalJSX {
     interface PlzButton {
     }
     interface PlzDivider {
+    }
+    interface PlzHero {
+    }
+    interface PlzHeroContent {
+    }
+    interface PlzHeroLogo {
     }
     interface PlzMenu {
     }
@@ -107,6 +140,9 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "plz-button": PlzButton;
         "plz-divider": PlzDivider;
+        "plz-hero": PlzHero;
+        "plz-hero-content": PlzHeroContent;
+        "plz-hero-logo": PlzHeroLogo;
         "plz-menu": PlzMenu;
         "plz-menu-item": PlzMenuItem;
         "plz-showcase": PlzShowcase;
@@ -121,6 +157,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "plz-button": LocalJSX.PlzButton & JSXBase.HTMLAttributes<HTMLPlzButtonElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
+            "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
+            "plz-hero-content": LocalJSX.PlzHeroContent & JSXBase.HTMLAttributes<HTMLPlzHeroContentElement>;
+            "plz-hero-logo": LocalJSX.PlzHeroLogo & JSXBase.HTMLAttributes<HTMLPlzHeroLogoElement>;
             "plz-menu": LocalJSX.PlzMenu & JSXBase.HTMLAttributes<HTMLPlzMenuElement>;
             "plz-menu-item": LocalJSX.PlzMenuItem & JSXBase.HTMLAttributes<HTMLPlzMenuItemElement>;
             "plz-showcase": LocalJSX.PlzShowcase & JSXBase.HTMLAttributes<HTMLPlzShowcaseElement>;

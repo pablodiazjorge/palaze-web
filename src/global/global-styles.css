@@ -17,14 +17,17 @@
     transition-timing-function: ease-out;
 }
 
-.sectionmain {
-    padding-top: 40px;
-    position: fixed;
-    left: 20%;
-    right: 20%;
-    transition: all 0.3s;
-    font-size: 20px;
-    text-align: justify;
+.resize {
+    /* Resize image */
+    height: 400px;
+    width: 400px;
+}
+
+.position-vertical {
+    /* Position center vertically */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .button-sidebar {
