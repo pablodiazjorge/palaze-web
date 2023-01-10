@@ -1,4 +1,10 @@
 :host {
-  display: block;
+  display: grid;
   box-sizing: border-box;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

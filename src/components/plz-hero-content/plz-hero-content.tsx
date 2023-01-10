@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'plz-hero-content',
@@ -9,9 +9,9 @@ export class PlzHeroContent {
 
   render() {
     return (
-      <Host>
+      <div class="content">
         <slot></slot>
-      </Host>
+      </div>
     );
   }
 

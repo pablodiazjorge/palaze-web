@@ -14,13 +14,3 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
 }
-
-.logo-palaze {
-  height: 100%;
-  width: 100%;
-}
-
-.small-content {
-  height: 100%;
-  width: 100%;
-}

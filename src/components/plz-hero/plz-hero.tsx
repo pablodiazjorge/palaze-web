@@ -11,13 +11,8 @@ export class PlzHero {
     return (
       <Host>
         <div class="hero grid">
-          <div class="logo-palaze">
-            <slot></slot>
-          </div>
-          <div class="small-content">
-            <slot></slot>
-          </div>
-
+          <slot></slot>
+          <slot></slot>
         </div>
       </Host>
     );
