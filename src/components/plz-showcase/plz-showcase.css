@@ -5,4 +5,6 @@
 .showcase {
   display: block;
   background-color: var(--plz-color-black-very-low);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
