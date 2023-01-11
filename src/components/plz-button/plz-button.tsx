@@ -7,7 +7,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 })
 export class PlzButton {
 
-  @Prop() variant?: string = "default-color";
+  @Prop() variant?: string = "default";
   @Prop() size?: string = "default-size"
   @Prop() corners?: string = "default-border";
 
