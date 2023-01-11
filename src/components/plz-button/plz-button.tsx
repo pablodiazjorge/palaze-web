@@ -1,4 +1,4 @@
-import { Component, h, Host } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'plz-button',
@@ -7,10 +7,14 @@ import { Component, h, Host } from '@stencil/core';
 })
 export class PlzButton {
 
+  @Prop() variant?: string = "default-color";
+  @Prop() size?: string = "default-size"
+  @Prop() corners?: string = "default-border";
+
   render() {
     return (
       <Host>
-        <button>
+        <button class={this.variant + " " + this.size + " " + this.corners}>
           <slot></slot>
         </button>
       </Host>

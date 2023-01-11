@@ -7,6 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlzButton {
+        "corners"?: string;
+        "size"?: string;
+        "variant"?: string;
+    }
+    interface PlzColors {
     }
     interface PlzDivider {
     }
@@ -35,6 +40,12 @@ declare global {
     var HTMLPlzButtonElement: {
         prototype: HTMLPlzButtonElement;
         new (): HTMLPlzButtonElement;
+    };
+    interface HTMLPlzColorsElement extends Components.PlzColors, HTMLStencilElement {
+    }
+    var HTMLPlzColorsElement: {
+        prototype: HTMLPlzColorsElement;
+        new (): HTMLPlzColorsElement;
     };
     interface HTMLPlzDividerElement extends Components.PlzDivider, HTMLStencilElement {
     }
@@ -92,6 +103,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "plz-button": HTMLPlzButtonElement;
+        "plz-colors": HTMLPlzColorsElement;
         "plz-divider": HTMLPlzDividerElement;
         "plz-hero": HTMLPlzHeroElement;
         "plz-hero-content": HTMLPlzHeroContentElement;
@@ -105,6 +117,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PlzButton {
+        "corners"?: string;
+        "size"?: string;
+        "variant"?: string;
+    }
+    interface PlzColors {
     }
     interface PlzDivider {
     }
@@ -128,6 +145,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "plz-button": PlzButton;
+        "plz-colors": PlzColors;
         "plz-divider": PlzDivider;
         "plz-hero": PlzHero;
         "plz-hero-content": PlzHeroContent;
@@ -144,6 +162,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "plz-button": LocalJSX.PlzButton & JSXBase.HTMLAttributes<HTMLPlzButtonElement>;
+            "plz-colors": LocalJSX.PlzColors & JSXBase.HTMLAttributes<HTMLPlzColorsElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
             "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
             "plz-hero-content": LocalJSX.PlzHeroContent & JSXBase.HTMLAttributes<HTMLPlzHeroContentElement>;
