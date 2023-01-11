@@ -13,6 +13,10 @@ export namespace Components {
     }
     interface PlzColors {
     }
+    interface PlzDataTable {
+    }
+    interface PlzDataTableContent {
+    }
     interface PlzDivider {
     }
     interface PlzHero {
@@ -46,6 +50,18 @@ declare global {
     var HTMLPlzColorsElement: {
         prototype: HTMLPlzColorsElement;
         new (): HTMLPlzColorsElement;
+    };
+    interface HTMLPlzDataTableElement extends Components.PlzDataTable, HTMLStencilElement {
+    }
+    var HTMLPlzDataTableElement: {
+        prototype: HTMLPlzDataTableElement;
+        new (): HTMLPlzDataTableElement;
+    };
+    interface HTMLPlzDataTableContentElement extends Components.PlzDataTableContent, HTMLStencilElement {
+    }
+    var HTMLPlzDataTableContentElement: {
+        prototype: HTMLPlzDataTableContentElement;
+        new (): HTMLPlzDataTableContentElement;
     };
     interface HTMLPlzDividerElement extends Components.PlzDivider, HTMLStencilElement {
     }
@@ -104,6 +120,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "plz-button": HTMLPlzButtonElement;
         "plz-colors": HTMLPlzColorsElement;
+        "plz-data-table": HTMLPlzDataTableElement;
+        "plz-data-table-content": HTMLPlzDataTableContentElement;
         "plz-divider": HTMLPlzDividerElement;
         "plz-hero": HTMLPlzHeroElement;
         "plz-hero-content": HTMLPlzHeroContentElement;
@@ -122,6 +140,10 @@ declare namespace LocalJSX {
         "variant"?: string;
     }
     interface PlzColors {
+    }
+    interface PlzDataTable {
+    }
+    interface PlzDataTableContent {
     }
     interface PlzDivider {
     }
@@ -146,6 +168,8 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "plz-button": PlzButton;
         "plz-colors": PlzColors;
+        "plz-data-table": PlzDataTable;
+        "plz-data-table-content": PlzDataTableContent;
         "plz-divider": PlzDivider;
         "plz-hero": PlzHero;
         "plz-hero-content": PlzHeroContent;
@@ -163,6 +187,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "plz-button": LocalJSX.PlzButton & JSXBase.HTMLAttributes<HTMLPlzButtonElement>;
             "plz-colors": LocalJSX.PlzColors & JSXBase.HTMLAttributes<HTMLPlzColorsElement>;
+            "plz-data-table": LocalJSX.PlzDataTable & JSXBase.HTMLAttributes<HTMLPlzDataTableElement>;
+            "plz-data-table-content": LocalJSX.PlzDataTableContent & JSXBase.HTMLAttributes<HTMLPlzDataTableContentElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
             "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
             "plz-hero-content": LocalJSX.PlzHeroContent & JSXBase.HTMLAttributes<HTMLPlzHeroContentElement>;

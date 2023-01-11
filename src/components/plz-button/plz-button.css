@@ -107,13 +107,13 @@ button {
   border-radius: var(--plz-border-radius-circle);
 }
 
-.default-color {
+.default {
   background-color: var(--plz-color-white);
   color: var(--plz-color-black-1);
   border: 1px solid var(--plz-color-black-4);
 }
 
-.default-color:hover {
+.default:hover {
   background-color: var(--plz-color-blue-5);
   cursor: pointer;
   color: var(--plz-color-blue-1);
