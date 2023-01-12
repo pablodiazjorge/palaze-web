@@ -4,9 +4,9 @@
 
 Este proyecto consiste en la creación de un conjunto de componentes web y una página en la que se haga uso de estos.
 
-## Empezando..
+## Empezando:s
 
-To start building a new web component using Stencil, clone this repo to a new directory:
+Para colonar el repositorio se puede usar:
 
 ```bash
 git clone https://github.com/pablodiazjorge/palaze-web.git plz-demo
