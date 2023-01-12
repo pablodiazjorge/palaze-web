@@ -33,6 +33,8 @@ export namespace Components {
     }
     interface PlzSpinner {
     }
+    interface PlzTooltip {
+    }
 }
 declare global {
     interface HTMLPlzButtonElement extends Components.PlzButton, HTMLStencilElement {
@@ -101,6 +103,12 @@ declare global {
         prototype: HTMLPlzSpinnerElement;
         new (): HTMLPlzSpinnerElement;
     };
+    interface HTMLPlzTooltipElement extends Components.PlzTooltip, HTMLStencilElement {
+    }
+    var HTMLPlzTooltipElement: {
+        prototype: HTMLPlzTooltipElement;
+        new (): HTMLPlzTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "plz-button": HTMLPlzButtonElement;
         "plz-colors": HTMLPlzColorsElement;
@@ -113,6 +121,7 @@ declare global {
         "plz-showcase-code": HTMLPlzShowcaseCodeElement;
         "plz-showcase-render": HTMLPlzShowcaseRenderElement;
         "plz-spinner": HTMLPlzSpinnerElement;
+        "plz-tooltip": HTMLPlzTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -143,6 +152,8 @@ declare namespace LocalJSX {
     }
     interface PlzSpinner {
     }
+    interface PlzTooltip {
+    }
     interface IntrinsicElements {
         "plz-button": PlzButton;
         "plz-colors": PlzColors;
@@ -155,6 +166,7 @@ declare namespace LocalJSX {
         "plz-showcase-code": PlzShowcaseCode;
         "plz-showcase-render": PlzShowcaseRender;
         "plz-spinner": PlzSpinner;
+        "plz-tooltip": PlzTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -172,6 +184,7 @@ declare module "@stencil/core" {
             "plz-showcase-code": LocalJSX.PlzShowcaseCode & JSXBase.HTMLAttributes<HTMLPlzShowcaseCodeElement>;
             "plz-showcase-render": LocalJSX.PlzShowcaseRender & JSXBase.HTMLAttributes<HTMLPlzShowcaseRenderElement>;
             "plz-spinner": LocalJSX.PlzSpinner & JSXBase.HTMLAttributes<HTMLPlzSpinnerElement>;
+            "plz-tooltip": LocalJSX.PlzTooltip & JSXBase.HTMLAttributes<HTMLPlzTooltipElement>;
         }
     }
 }
