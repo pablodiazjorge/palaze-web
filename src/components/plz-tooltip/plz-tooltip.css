@@ -1,6 +1,4 @@
 :host {
-  display: block;
-
   /*    ## FUENTES ##   */
   --plz-font-primary: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -65,8 +63,50 @@
 
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
+
+  /* Custom property to determine scale */
+  --scale: 0;
+  --arrow-size: 10px;
 }
 
-.tool {
-  
+.tooltip {
+  box-sizing: border-box;
+}
+
+.tooltip::before,
+.tooltip::after {
+  position: absolute;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 200ms transform;
+  transform-origin: bottom center;
+  top: -0.25rem;
+  left: 50%;
+
+
+}
+
+.tooltip::before {
+  --translate-y: calc(-100% - var(--arrow-size)); /* Para controlar la flecha del tooltip */
+  background-color: var(--plz-color-black-2);
+  color: var(--plz-color-white);
+  text-align: center;
+  border-radius: var(--plz-border-radius-default);
+  content: attr(data-tool);
+  padding: 0.5rem;
+  width: max-content;
+  /* Esto hará que el texto se distribuya mejor dentro del espacio */
+  max-width: 100%;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  --scale: 1;
+}
+
+.tooltip::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+  transform-origin: top center;
+  content: '';
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--plz-color-black-2);
 }
