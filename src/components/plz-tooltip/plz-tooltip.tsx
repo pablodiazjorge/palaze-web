@@ -6,12 +6,14 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzTooltip {
-  @Prop() data: string = 'Prueba';
+  @Prop() data: string = '';
+  @Prop() link: string = '';
 
   render() {
     return (
-      <div class="tooltip" data-tool={this.data}>
+      <div class="container">
         <slot></slot>
+        <div class="tooltip">Example text</div>
       </div>
     );
   }

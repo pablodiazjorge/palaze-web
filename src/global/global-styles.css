@@ -40,6 +40,12 @@
     width: 400px;
 }
 
+.colocation {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .position-vertical {
     /* Position center vertically */
     position: relative;

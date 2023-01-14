@@ -66,47 +66,58 @@
 
   /* Custom property to determine scale */
   --scale: 0;
-  --arrow-size: 10px;
+  --arrow: 5px;
 }
 
-.tooltip {
+
+.container {
   box-sizing: border-box;
 }
 
-.tooltip::before,
-.tooltip::after {
+.container .tooltip {
   position: absolute;
-  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  background-color: var(--plz-color-black-2);
+  color: var(--plz-color-white);
+  padding: 0.5em;
+  opacity: 0;
+  transform: translateX(-50%) translateY(calc(-100% - var(--arrow)));
   transition: 200ms transform;
   transform-origin: bottom center;
   top: -0.25rem;
   left: 50%;
-
-
+  
+  /*
+  padding: 0.2em;
+  pointer-events: none;
+  width: 100%;
+  bottom: 100%;
+  margin-bottom: 15px;
+  */
 }
 
-.tooltip::before {
-  --translate-y: calc(-100% - var(--arrow-size)); /* Para controlar la flecha del tooltip */
-  background-color: var(--plz-color-black-2);
-  color: var(--plz-color-white);
-  text-align: center;
-  border-radius: var(--plz-border-radius-default);
-  content: attr(data-tool);
-  padding: 0.5rem;
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.container .tooltip:before {
+  --translate-y: calc(-100% - var(--arrow));
   width: max-content;
-  /* Esto hará que el texto se distribuya mejor dentro del espacio */
   max-width: 100%;
 }
 
-.tooltip:hover::before,
-.tooltip:hover::after {
+.container:hover .tooltip {
   --scale: 1;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.tooltip::after {
-  --translate-y: calc(-1 * var(--arrow-size));
-  transform-origin: top center;
-  content: '';
-  border: var(--arrow-size) solid transparent;
-  border-top-color: var(--plz-color-black-2);
+/* CSS Triangles - see Trevor's post */
+.container .tooltip:after {
+  position: absolute;
+  --translate-y: calc(-1 * var(--arrow));
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid var(--plz-color-black-2) 10px;
+  bottom: -10px;
+  content: "";
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
 }
