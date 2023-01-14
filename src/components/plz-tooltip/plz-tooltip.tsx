@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'plz-tooltip',
@@ -6,14 +6,11 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzTooltip {
-  @Prop() data: string = '';
-  @Prop() link: string = '';
-
   render() {
     return (
       <div class="container">
         <slot></slot>
-        <div class="tooltip">Example text</div>
+        <div class="tooltip"><slot name='tooltip'></slot></div>
       </div>
     );
   }

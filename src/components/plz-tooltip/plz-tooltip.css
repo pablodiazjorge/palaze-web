@@ -105,7 +105,6 @@
 .container:hover .tooltip {
   --scale: 1;
   opacity: 1;
-  pointer-events: auto;
 }
 
 /* CSS Triangles - see Trevor's post */
