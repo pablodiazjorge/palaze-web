@@ -34,6 +34,7 @@ export namespace Components {
     interface PlzSpinner {
     }
     interface PlzTooltip {
+        "clase": string;
     }
 }
 declare global {
@@ -153,6 +154,7 @@ declare namespace LocalJSX {
     interface PlzSpinner {
     }
     interface PlzTooltip {
+        "clase"?: string;
     }
     interface IntrinsicElements {
         "plz-button": PlzButton;
