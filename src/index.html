@@ -13,31 +13,60 @@
 
 
 <body>
+    <header class="header">
+        <a href="#" class="logo"><img src="./assets/icon/palaze-logo3.png" alt="" class="resize-logo"></a>
+        <a href="#" class="web">Palaze web</a>
+        <nav class="right">
+            <a href="#home">Docs</a>
+            <a href="#">Contacto</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Github</a>
+        </nav>
+    </header>
+
     <!-- Main section -->
-    <main class="main-content">
+    <main class="landing-content">
         <!-- Hero section -->
         <section>
-            <div>
+            <!-- <div>
                 <a href="docs.html">Press</a>
-            </div>
+            </div> -->
 
             <plz-hero>
                 <plz-hero-content>
-                    <img src="./assets/icon/logo-plz.png" alt="" class="resize colocation">
+                    <img src="./assets/icon/palaze-logo3.png" alt="" class="resize colocation">
 
                 </plz-hero-content>
                 <plz-hero-content>
                     <div class="hero-format-text position-vertical">
                         <h1>Palaze</h1>
                         <plz-divider></plz-divider>
-                        <p>Componentes web escalables y compatibles con todos los frameworks actuales</p>
+                        <p>Elevate your website's design and functionality with our collection of native web components.
+                            Our components are lightweight, fast-loading, and easy to implement, making them the perfect
+                            solution for any website.</p>
+
                     </div>
                 </plz-hero-content>
             </plz-hero>
         </section>
 
+        <!-- 
+            Features section:
+
+            "Built using modern web technologies such as HTML, CSS, and JavaScript for maximum compatibility"
+            "Fully customizable to fit the look and feel of your website"
+            "Performance optimized for fast loading and smooth user experience"
+            "Compatible with all major web browsers"
+        -->
+
+        <br><br><br><br><br>
+
         <section>
-            
+            <plz-card>
+                <img src="./assets/icon/pattern.png" alt="" slot="image" style="height: 200px; width: 200px;">
+                <h1 slot="content">Titulo</h1>
+                <p slot="content">Pequeña descirpción aquí</p>
+            </plz-card>
         </section>
     </main>
 
