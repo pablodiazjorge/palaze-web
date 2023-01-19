@@ -74,14 +74,14 @@ div {
     margin: 0;
 }
 
-/* h1 {
+ .hero-format-text h1 {
     font-size: 2.75rem;
     font-weight: 500;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
-} */
+}
 
-h2 {
+.hero-format-text h2 {
     font-size: 2.25rem;
     font-weight: 100;
     margin-top: 0.2em;

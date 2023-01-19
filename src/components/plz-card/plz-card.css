@@ -66,36 +66,99 @@
   --plz-color-white: white;
 }
 
-.card.default {
-  width: 100%;
-  width: max-content;
-  background-color: var(--plz-color-white);
-  color: var(--plz-color-black-1);
-  transition: box-shadow .3s;
-  border-radius: var(--plz-border-radius-default);
-  overflow: hidden;
-  position: relative;
-}
-
-.card.default:hover {
-  box-shadow: var(--plz-color-black-4);
-}
-
-.card.default ::slotted(h1) {
-  background-size: 100% 100%;
-}
-
-.card.default ::slotted(h1):hover {
-  background-image: linear-gradient(transparent 50%, alpha(var(--plz-color-blue-2), 0.2) 50%);
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 0% 100%;
-  transition: background .3s;
-}
-
-
-.card.default a {
-  display: block;
-  color: inherit;
+a {
+  display: flex;
   text-decoration: none;
+  width: 320px;
+  color: inherit;
 }
+
+.card-default {
+  width: 320px;
+  border-radius: var(--plz-border-radius-default);
+  background-color: var(--plz-color-white);
+  transition: box-shadow .3s;
+}
+
+.card-default:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-content-default,
+.card-content-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay-default {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  width: 320px;
+  background-color: var(--plz-color-black-3);
+  background-size: 320px;
+  border-radius: var(--plz-border-radius-default) var(--plz-border-radius-default) 2rem 0;
+}
+
+/* Corner invading */
+/* .overlay-default::after,
+.overlay-default::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--plz-color-black-3);
+}
+.overlay-default::after {
+  border-radius: 2rem 0 0 0;
+  background-color: var(--plz-color-white);
+} */
+
+.image-content-default {
+  position: relative;
+  row-gap: 5px;
+}
+
+.card-content-default ::slotted(h2) {
+  font-size: 24px;
+  font-weight: var(--plz-font-weight-bold);
+  color: var(--plz-color-black-1);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.card-content-default ::slotted(p) {
+  font-size: 16px;
+  text-align: justify;
+  color: var(--plz-color-black-1);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+/* .overlay-image-default {
+  position: relative;
+  height: 150px;
+  width: 200px;
+  border-radius: var(--plz-border-radius-default);
+  background-color: var(--plz-color-white);
+  padding: 3px;
+}
+
+.overlay-image-default .image-default {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+  border-radius: var(--plz-border-radius-default);
+  border: 4px solid --plz-color-blue-2;
+} */
