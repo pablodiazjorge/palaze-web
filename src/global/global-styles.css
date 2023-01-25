@@ -74,7 +74,7 @@ div {
     margin: 0;
 }
 
- .hero-format-text h1 {
+.hero-format-text h1 {
     font-size: 2.75rem;
     font-weight: 500;
     margin-top: 0.3em;
@@ -257,4 +257,64 @@ header .right {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/* SLIDER */
+
+.slider-content {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    background-color: var(--plz-color-black-3);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    position:relative;
+    width: 90%;
+}
+
+.wrapper i {
+    top: 50%;
+    position: absolute;
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -23px;;
+}
+
+.wrapper i:last-child {
+    right: -23px;;
+}
+
+.wrapper .carousel {
+    /* white-space: nowrap; */
+    display: flex;
+    font-size: 0px;
+    overflow: hidden;
+}
+
+.carousel plz-card {
+    width: 320px;
+    margin-left: 14px;
+}
+
+.carousel plz-card:first-child {
+    margin-left: 0px;
 }

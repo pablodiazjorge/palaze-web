@@ -1,5 +1,5 @@
 :host {
-  display: block;
+  display: flex;
   /*    ## FUENTES ##   */
   --plz-font-primary: Verdana, Geneva, Tahoma, sans-serif;
 
