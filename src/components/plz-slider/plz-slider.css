@@ -78,12 +78,12 @@
 
 }
 
-.wrapper {
+.plz-wrapper {
   position: relative;
   width: 90%;
 }
 
-.wrapper i {
+.plz-wrapper i {
   top: 50%;
   position: absolute;
   background-color: white;
@@ -95,53 +95,53 @@
   transform: translateY(-50%);
 }
 
-.wrapper i:first-child {
+.plz-wrapper i:first-child {
   left: -18px;
   z-index: 1;
 }
 
-.wrapper i:last-child {
+.plz-wrapper i:last-child {
   right: -23px;
   z-index: 1;
 }
 
-.wrapper .carousel {
+.plz-wrapper .plz-carousel {
   display: flex;
   /* white-space: nowrap; */
   font-size: 0px;
   overflow: hidden;
 }
 
-.wrapper i .icon-left {
+.plz-wrapper i .icon-left {
   background: url('assets/icon/left-arrow-angle.png');
   height: 45px;
   width: 45px;
 }
 
-.wrapper i .icon-right {
+.plz-wrapper i .icon-right {
   background: url('assets/icon/right-arrow-angle.png');
   height: 45px;
   width: 45px;
 }
 
-.carousel ::slotted(plz-card) {
+.plz-carousel ::slotted(plz-card) {
   width: 320px;
   margin-left: 5px;
   margin-right: 5px;
 }
 
-.carousel ::slotted(plz-card):first-child {
+.plz-carousel ::slotted(plz-card):first-child {
   margin-left: 0px;
 }
 
 @media screen and (max-width: 900px){
-  .carousel ::slotted(plz-card) {
+  .plz-carousel ::slotted(plz-card) {
     width: calc(100%/2);
   }
 }
 
 @media screen and (max-width: 550px){
-  .carousel ::slotted(plz-card) {
+  .plz-carousel ::slotted(plz-card) {
     width: 100%;
   }
 }
