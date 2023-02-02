@@ -1,7 +1,6 @@
 :root {
     /*    ## FUENTES ##   */
-    --plz-font-primary: Verdana, Geneva, Tahoma, sans-serif;
-
+    --plz-font-primary: Padauk, sans-serif;
     /* Peso fuente */
     --plz-font-weight-light: 100;
     --plz-font-weight-normal: 400;
@@ -66,34 +65,29 @@
 }
 
 body {
+    font-family: var(--plz-font-primary);
     margin: 0;
     background-color: var(--plz-color-black-5);
 }
 
-div {
+div,
+h1,
+h2,
+h3,
+p,
+span,
+img,
+hr {
     margin: 0;
+    padding: 0;
 }
 
-.hero-format-text h1 {
-    font-size: 2.75rem;
-    font-weight: 500;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-}
-
-.hero-format-text h2 {
-    font-size: 2.25rem;
-    font-weight: 100;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-}
-
-h3 {
+/* h3 {
     font-size: 2rem;
     font-weight: 100;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
-}
+} */
 
 .main-content {
     font-family: sans-serif, Verdana, Tahoma;
@@ -148,25 +142,100 @@ h3 {
 /*
     ###      HERO      ###
 */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 54px;
+    /* Deberia ser 55px pero dependiendo de la resolucion se escapa un pixel */
+    height: 900px;
+    background-image: url('../assets/icon/Hero-img.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-.hero-format-text {
+.hero-content {
+    box-sizing: border-box;
+    margin: 200px;
+    padding: 40px;
+    background-color: var(--plz-color-white);
+    border-radius: 50px;
     text-align: center;
 }
 
-.hero-format-text h1 {
-    font-size: 3rem;
+.hero h1 {
+    box-sizing: border-box;
+    font-size: 64px;
     font-weight: 500;
     letter-spacing: -0.03rem;
 }
 
-.hero-format-text p {
-    font-size: 1.8rem;
+.hero p {
+    box-sizing: border-box;
+    font-size: 24px;
 }
 
-.component-tag {
-    font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Sans Unicode';
-    color: #495057;
-    letter-spacing: 0.1rem;
+/*
+    ###      SUB-HERO      ###
+*/
+
+.sub-hero {
+    margin: 0 auto;
+    display: grid;
+    margin-top: 60px;
+    width: 660px;
+    max-width: 660px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-hero h2 {
+    box-sizing: border-box;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+}
+
+.sub-hero p {
+    box-sizing: border-box;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-size: 20px;
+}
+
+.docs-button {
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 50px;
+    color: var(--plz-color-white);
+    background: var(--plz-color-black-2);
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+/*
+    ###      DIVIDERS      ###
+*/
+
+.divider-green {
+    height: 400px;
+    width: 100%;
+    background-image: url('../assets/icon/Divider-green.svg');
+    background-position: top left;
+    background-size: cover;
+}
+
+.divider-orange {
+    height: 400px;
+    width: 100%;
+    background-image: url('../assets/icon/Divider-orange.svg');
+    background-position: bottom left;
+    background-size: cover;
 }
 
 /*
@@ -203,6 +272,10 @@ header a.web {
     font-weight: var(--plz-font-weight-bold);
 }
 
+header a.web:hover {
+    background-color: var(--plz-color-black-2);
+}
+
 header a:hover {
     background-color: var(--plz-color-black-3);
     color: var(--plz-color-white);
@@ -227,14 +300,51 @@ header .right {
     padding-bottom: 2px;
 }
 
+.logo:hover {
+    background-color: var(--plz-color-black-2);
+}
+
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
     header {
-        position: static;
-        width: 100%;
         text-align: center;
     }
+
+    header a.web {
+        display: none;
+    }
+
+    .hero {
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 1140px) {
+    .hero-content {
+        margin: 50px;
+    }
+}
+
+/* @media screen and (min-width: 1440px) {
+    .divider-green {
+        height: 600px;
+    }
+} */
+
+/*
+    ###      HERO      ###
+*/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-image: url('../assets/icon/Footer-img.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 /*
     ###      GENERAL      ###
@@ -259,62 +369,8 @@ header .right {
     transform: translateY(-50%);
 }
 
-/* SLIDER */
-
-.slider-content {
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 350px;
-    background-color: var(--plz-color-black-3);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.wrapper {
-    display: flex;
-    position:relative;
-    width: 90%;
-}
-
-.wrapper i {
-    top: 50%;
-    position: absolute;
-    background-color: white;
-    height: 45px;
-    width: 45px;
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 46px;
-    border-radius: 50%;
-    color: black;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-.wrapper i:first-child {
-    left: -23px;;
-}
-
-.wrapper i:last-child {
-    right: -23px;;
-}
-
-.wrapper .carousel {
-    /* white-space: nowrap; */
-    display: flex;
-    font-size: 0px;
-    overflow: hidden;
-}
-
-.carousel plz-card {
-    width: 320px;
-    margin-left: 14px;
-}
-
-.carousel plz-card:first-child {
-    margin-left: 0px;
+.component-tag {
+    font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Sans Unicode';
+    color: #495057;
+    letter-spacing: 0.1rem;
 }
