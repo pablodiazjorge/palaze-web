@@ -1,8 +1,6 @@
 :host {
-  display: flex;
   /*    ## FUENTES ##   */
-  --plz-font-primary: Verdana, Geneva, Tahoma, sans-serif;
-
+  --plz-font-primary: Padauk, sans-serif;
   /* Peso fuente */
   --plz-font-weight-light: 100;
   --plz-font-weight-normal: 400;
@@ -66,99 +64,54 @@
   --plz-color-white: white;
 }
 
-a {
-  display: flex;
-  text-decoration: none;
-  width: 320px;
-  color: inherit;
-}
-
-.card-default {
-  width: 320px;
-  border-radius: var(--plz-border-radius-default);
-  background-color: var(--plz-color-white);
-  transition: box-shadow .3s;
-}
-
-.card-default:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.image-content-default,
-.card-content-default {
-  display: flex;
-  flex-direction: column;
+.a-default {
+  box-sizing: border-box;
+  display: inline-flex;
   align-items: center;
+  flex-direction: column-reverse;
+  position: relative;
+  justify-content: start;
+  background-size: cover;
+  vertical-align: baseline;
+  min-width: 200px;
+  border-radius: 24px;
+  color: inherit;
+  text-decoration: none;
 }
 
-.overlay-default {
+.glow-blue {
+  box-sizing: border-box;
+}
+
+.glow-blue:hover {
+  background-color: var(--plz-color-blue-5);
+}
+
+/* Image container */
+.image-container-default {
+  display: flex;
   position: relative;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
   height: 200px;
-  width: 320px;
+  border-radius: 24px;
   background-color: var(--plz-color-black-3);
-  background-size: 320px;
-  border-radius: var(--plz-border-radius-default) var(--plz-border-radius-default) 2rem 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
 }
 
-/* Corner invading */
-/* .overlay-default::after,
-.overlay-default::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  bottom: -40px;
-  height: 40px;
-  width: 40px;
-  background-color: var(--plz-color-black-3);
-}
-.overlay-default::after {
-  border-radius: 2rem 0 0 0;
-  background-color: var(--plz-color-white);
-} */
-
-.image-content-default {
+/* Text container*/
+.text-container-default {
+  box-sizing: border-box;
+  display: grid;
   position: relative;
-  row-gap: 5px;
-}
-
-.card-content-default ::slotted(h2) {
-  font-size: 24px;
-  font-weight: var(--plz-font-weight-bold);
-  color: var(--plz-color-black-1);
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0;
-}
-
-.card-content-default ::slotted(p) {
+  align-self: start;
+  margin: 24px;
+  gap: 8px;
+  cursor: pointer;
   font-size: 16px;
-  text-align: justify;
-  color: var(--plz-color-black-1);
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  margin: 0;
+  vertical-align: baseline;
 }
-
-/* .overlay-image-default {
-  position: relative;
-  height: 150px;
-  width: 200px;
-  border-radius: var(--plz-border-radius-default);
-  background-color: var(--plz-color-white);
-  padding: 3px;
-}
-
-.overlay-image-default .image-default {
-  height: 100%;
-  width: 100%;
-  object-fit: scale-down;
-  border-radius: var(--plz-border-radius-default);
-  border: 4px solid --plz-color-blue-2;
-} */
