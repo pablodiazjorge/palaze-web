@@ -64,12 +64,7 @@
     --plz-color-white: white;
 }
 
-body {
-    font-family: var(--plz-font-primary);
-    margin: 0;
-    background-color: var(--plz-color-black-5);
-}
-
+body,
 div,
 h1,
 h2,
@@ -82,23 +77,14 @@ hr {
     padding: 0;
 }
 
-.main-content {
-    font-family: sans-serif, Verdana, Tahoma;
-    margin-top: 5%;
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    transition: all 0.3s;
-}
+/*
+    ###      LANDING-PAGE      ###
+*/
 
-.landing-content {
-    font-family: sans-serif, Verdana, Tahoma;
-    margin-top: 10%;
-    padding-bottom: 10%;
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    transition: all 0.3s;
+.landing-main {
+    font-family: var(--plz-font-primary);
+    margin: 0;
+    background-color: var(--plz-color-black-5);
 }
 
 .cards-section {
@@ -169,38 +155,6 @@ hr {
 
 .about-us-content:first-child {
     border-right: 1px solid var(--plz-color-black-3);
-}
-
-
-/*
-    ###      SIDEBAR      ###
-*/
-
-.sidebar {
-    background-color: var(--plz-color-white);
-    height: 100%;
-    width: 0%;
-    position: fixed;
-    overflow-x: hidden;
-    transition-property: width;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-}
-
-.button-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    border: none;
-    padding: 6px 6px;
-    font-size: 28px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.button-sidebar:active {
-    color: gray;
 }
 
 /*
@@ -356,6 +310,10 @@ header .right {
     padding-right: 13px;
 }
 
+/*
+    ###      RESIZE AND FIXING      ###
+*/
+
 .resize-logo {
     margin: 0;
     padding: 0;
@@ -374,7 +332,10 @@ header .right {
     background-color: var(--plz-color-black-2);
 }
 
-/* Media query for screens smaller than 600px */
+/*
+    ###      SCREEN MEDIA QUERIS      ###
+*/
+
 @media screen and (max-width: 600px) {
     header {
         text-align: center;
@@ -396,8 +357,9 @@ header .right {
 }
 
 /*
-    ###      HERO      ###
+    ###      FOOTER      ###
 */
+
 footer {
     box-sizing: border-box;
     display: flex;
@@ -462,13 +424,94 @@ footer {
     margin-bottom: 20px;
 }
 
+/*-------------------------------------------------------------------------------------------------------------*/
+
+/*
+    ######      DOCS      ######
+*/
+
+.docs-main {
+    font-family: var(--plz-font-primary);
+    margin-top: 5%;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    transition: all 0.3s;
+}
+
+.docs-main h1 {
+    font-size: 40px;
+}
+
+.docs-main h2 {
+    font-size: 34px;
+}
+
+.docs-main h3 {
+    font-size: 30px;
+}
+
+.docs-main p {
+    font-size: 20px;
+}
+
+/*
+    ###      SIDEBAR      ###
+*/
+
+.sidebar {
+    background-color: var(--plz-color-white);
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    overflow-x: hidden;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.button-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    padding: 6px 6px;
+    font-size: 28px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-sidebar:active {
+    color: gray;
+}
+
+.component-tag {
+    font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Sans Unicode';
+    color: #495057;
+    letter-spacing: 0.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
     ###      GENERAL      ###
 */
 
-.resize {
-    /* Resize image */
+/* .resize {
+    /* Resize image 
     height: 400px;
     width: 400px;
 }
@@ -480,14 +523,8 @@ footer {
 }
 
 .position-vertical {
-    /* Position center vertically */
+    /* Position center vertically 
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.component-tag {
-    font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Sans Unicode';
-    color: #495057;
-    letter-spacing: 0.1rem;
-}
+} */
