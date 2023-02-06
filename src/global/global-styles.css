@@ -6,29 +6,26 @@
     --plz-font-weight-normal: 400;
     --plz-font-weight-bold: 500;
 
-    /* Tamaño fuente */
-    --plz-font-size-small: 0.75rem;
-    /* (12px) */
-    --plz-font-size-normal: 0.875rem;
-    /* (14px) */
-    --plz-font-size-medium: 1rem;
-    /* (16px) */
-    --plz-font-size-sub-section: 2.25rem;
-    --plz-font-size-section: 2.75rem;
-    /* (36px) */
-    --plz-font-size-titles: 3rem;
-    /* (48px) */
+  /* Tamaño fuente */
+  --plz-font-size-very-small: 12px;
+  --plz-font-size-small: 14px;
+  --plz-font-size-normal: 16px;
+  --plz-font-size-sub-section: 20px;
+  --plz-font-size-section: 48px;
+  --plz-font-size-titles: 64px;
+  --plz-font-size-below-titles: 24px;
 
-    /* Altura de linea */
-    --plz-line-height-low: 1.4;
-    --plz-line-height-normal: 1.8;
-    --plz-line-height-big: 2.4;
+  /* Altura de linea */
+  --plz-line-height-low: 1.4;
+  --plz-line-height-normal: 1.8;
+  --plz-line-height-big: 2.4;
 
-    /* Radio borde */
-    --plz-border-radius-circle: 50%;
-    --plz-border-radius-rounded: 9999px;
-    --plz-border-radius-square: 0px;
-    --plz-border-radius-default: 0.25rem;
+  /* Radio borde */
+  --plz-border-radius-circle: 50%;
+  --plz-border-radius-rounded: 9999px;
+  --plz-border-radius-low-rounded: 25px;
+  --plz-border-radius-default: 0.25rem;
+  --plz-border-radius-square: 0px;
 
     /*    ## COLORES ##   */
 
@@ -126,7 +123,7 @@ hr {
 
 .about-us-section h2 {
     margin-top: 30px;
-    font-size: 48px;
+    font-size: var(--plz-font-size-section);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -137,7 +134,7 @@ hr {
 }
 
 .about-us-section p {
-    font-size: 20px;
+    font-size: var(--plz-font-size-sub-section);
     text-align: justify;
 }
 
@@ -184,14 +181,14 @@ hr {
 
 .hero h1 {
     box-sizing: border-box;
-    font-size: 64px;
+    font-size: var(--plz-font-size-titles);
     font-weight: 500;
     letter-spacing: -0.03rem;
 }
 
 .hero p {
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: var(--plz-font-size-below-titles);
 }
 
 /*
@@ -211,7 +208,7 @@ hr {
 
 .sub-hero h2 {
     box-sizing: border-box;
-    font-size: 48px;
+    font-size: var(--plz-font-size-section);
     font-weight: 500;
     letter-spacing: -0.03rem;
 }
@@ -220,7 +217,7 @@ hr {
     box-sizing: border-box;
     padding-left: 90px;
     padding-right: 90px;
-    font-size: 20px;
+    font-size: var(--plz-font-size-sub-section);
 }
 
 .docs-button {
@@ -233,7 +230,7 @@ hr {
     color: var(--plz-color-white);
     background: var(--plz-color-black-2);
     border-radius: 20px;
-    font-size: 20px;
+    font-size: var(--plz-font-size-sub-section);
     cursor: pointer;
 }
 
@@ -284,7 +281,7 @@ header a {
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: var(--plz-font-size-sub-section);
     line-height: 25px;
     border-radius: 4px;
 }
@@ -397,7 +394,7 @@ footer {
 }
 
 .footer-content p{
-    font-size: 20px;
+    font-size: var(--plz-font-size-sub-section);
     text-align: justify;
 }
 
@@ -440,11 +437,11 @@ footer {
 }
 
 .docs-main h1 {
-    font-size: 40px;
+    font-size: var(--plz-font-size-titles);
 }
 
 .docs-main h2 {
-    font-size: 34px;
+    font-size: var(--plz-font-size-section);
 }
 
 .docs-main h3 {
@@ -452,7 +449,7 @@ footer {
 }
 
 .docs-main p {
-    font-size: 20px;
+    font-size: var(--plz-font-size-sub-section);
 }
 
 /*

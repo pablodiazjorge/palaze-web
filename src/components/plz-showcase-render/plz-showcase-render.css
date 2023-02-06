@@ -9,6 +9,9 @@
 }
 
 div {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background-color: var(--plz-color-white);
   box-sizing: border-box;
   border-right: 2px solid var(--plz-color-black-low);

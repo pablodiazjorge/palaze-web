@@ -74,45 +74,72 @@
             <plz-showcase>
                 <plz-showcase-render>
                     <plz-button>Default</plz-button>
-                    <plz-button variant="blue">Blue</plz-button>
-                    <plz-button variant="green">Green</plz-button>
-                    <plz-button variant="red">Red</plz-button>
+                    <!-- <plz-button color="blue-transparent">Ghost</plz-button> -->
+                    <plz-button variant="progress">Progress</plz-button>
+                    <plz-button variant="icon" icon="github" size="small">Icon</plz-button>
+                    <plz-button variant="icon" icon="mail">Icon</plz-button>
+                    <plz-button variant="icon" icon="linkedin" size="big">Icon</plz-button>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-button>
           Default
 <plz-button>
-<plz-button variant="blue">
-          Blue
-<plz-button>
-<plz-button variant="green">
-          Green
+<plz-button variant="progress">
+    Progress
 <plz-button>>
-<plz-button variant="red">
-          Red
+<plz-button variant="icon">
+    Icon
 <plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
 
+            <!-- Colors -->
+            <h3>Colores de botón</h3>
+            <p>Puedes usar el atributo color para elegir el color de botón que prefieras.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-button>Default</plz-button>
+                    <plz-button color="blue">Blue</plz-button>
+                    <plz-button color="green">Green</plz-button>
+                    <plz-button color="red">Red</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button>
+          Default
+<plz-button>
+<plz-button color="blue">
+          Blue
+<plz-button>
+<plz-button color="green">
+          Green
+<plz-button>>
+<plz-button color="red">
+          Red
+<plz-button>'>
+                </plz-showcase-code>
+            </plz-showcase>
             <!-- Radio borde -->
             <h3>Borde de botón</h3>
             <p>Puedes usar el atributo border para elegir la forma del botón que prefieras.</p>
             <plz-showcase>
                 <plz-showcase-render>
-                    <plz-button corners="border-square">Square</plz-button>
+                    <plz-button corners="square">Square</plz-button>
                     <plz-button>Default</plz-button>
-                    <plz-button corners="border-rounded">Rounded</plz-button>
-                    <plz-button corners="border-circle">Circle</plz-button>
+                    <plz-button corners="low-rounded">Low Rounded</plz-button>
+                    <plz-button corners="rounded">Rounded</plz-button>
+                    <plz-button corners="circle">Circle</plz-button>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-button corners="border-square">
+                <plz-showcase-code text-code='<plz-button corners="square">
     Square
 </plz-button>
 <plz-button>
     Default
 </plz-button>
-<plz-button corners="border-rounded">
+<plz-button corners="low-rounded">
+    Low Rounded
+</plz-button>
+<plz-button corners="rounded">
     Rounded
 </plz-button>
-<plz-button corners="border-circle">
+<plz-button corners="circle">
     Circle
 </plz-button>'>
                 </plz-showcase-code>
@@ -122,17 +149,17 @@
             <p>Puedes usar el atributo size para elegir el tamaño de botón que prefieras.</p>
             <plz-showcase>
                 <plz-showcase-render>
-                    <plz-button size="size-small">Small</plz-button>
+                    <plz-button size="small">Small</plz-button>
                     <plz-button>Default</plz-button>
-                    <plz-button size="size-big">Big</plz-button>
+                    <plz-button size="big">Big</plz-button>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-button size="size-small">
+                <plz-showcase-code text-code='<plz-button size="small">
     Small
 </plz-button>
 <plz-button>
     Default
 </plz-button>
-<plz-button size="size-big">
+<plz-button size="big">
     Big
 </plz-button>'>
                 </plz-showcase-code>
@@ -140,9 +167,6 @@
             <!-- Por último un apartado estilo tabla sin bordes donde explicar los slots, atributos y propiedades -->
             <h2>Atributos</h2>
             <plz-divider></plz-divider>
-        </section>
-        <section>
-            <plz-colors></plz-colors>
         </section>
     </main>
 </body>
