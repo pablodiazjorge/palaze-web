@@ -11,6 +11,7 @@
   height: 0;
   padding-top: 4px;
   padding-bottom: 4px;
+  margin-bottom: 10px;
   border-top: 1px solid var(--plz-color-black-very-low);
   border-bottom: 1px solid var(--plz-color-black-low);
 }

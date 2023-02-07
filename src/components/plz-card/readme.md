@@ -1,4 +1,4 @@
-# plz-button
+# plz-card
 
 
 
@@ -9,10 +9,9 @@
 
 | Property  | Attribute | Description | Type     | Default     |
 | --------- | --------- | ----------- | -------- | ----------- |
-| `color`   | `color`   |             | `string` | `'default'` |
-| `corners` | `corners` |             | `string` | `'default'` |
-| `icon`    | `icon`    |             | `string` | `''`        |
-| `size`    | `size`    |             | `string` | `'default'` |
+| `hover`   | `hover`   |             | `string` | `'blue'`    |
+| `image`   | `image`   |             | `string` | `''`        |
+| `url`     | `url`     |             | `string` | `'#'`       |
 | `variant` | `variant` |             | `string` | `'default'` |
 
 

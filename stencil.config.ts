@@ -18,9 +18,8 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
       copy: [
-        {
-          src: 'docs.html',
-        }
+        { src: 'pages/docs.html', dest: 'docs.html' },
+        { src: 'pages/docs-button.html', dest: 'docs-button.html' }
       ],
     },
   ],
