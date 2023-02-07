@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Host, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'plz-button',
@@ -12,7 +12,22 @@ export class PlzButton {
   @Prop() corners?: string = 'default';
   @Prop() icon?: string = '';
 
-  ComponentDidLoad() {}
+  @Element() el: HTMLElement;
+
+
+  /**
+   * Method to control when user click in the button type progress
+   */
+  handleClick() {
+    const button = this.el.shadowRoot.querySelector('.progress') as HTMLButtonElement;
+    const element = this.el.shadowRoot.querySelector('.spinner') as HTMLElement;
+    button.disabled = true;
+    element.style.display = 'block';
+    setTimeout(() => {
+      element.style.display = 'none';
+      button.disabled = false;
+    }, 2000);
+  }
 
   render() {
     return this.variant == 'default' ? (
@@ -29,7 +44,10 @@ export class PlzButton {
       </Host>
     ) : this.variant == 'progress' ? (
       <Host>
-        <button class={this.variant + ' ' + this.color + '-color ' + this.size + '-size ' + this.corners + '-border'}>
+        <button class={this.variant + ' ' + this.color + '-color ' + this.size + '-size ' + this.corners + '-border'} onClick={() => this.handleClick()}>
+          <div class="spinner">
+            <div class="spin"></div>
+          </div>
           <slot></slot>
         </button>
       </Host>

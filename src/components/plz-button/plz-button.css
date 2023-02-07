@@ -145,15 +145,33 @@ img {
 
 .progress {
   padding: 2px 8px;
-  background-color: var(--plz-color-white);
-  color: var(--plz-color-black-1);
-  border: 1px solid var(--plz-color-black-4);
+  cursor: pointer;
 }
 
-.progress:hover {
-  background-color: var(--plz-color-blue-5);
-  cursor: pointer;
-  color: var(--plz-color-blue-1);
+.spinner {
+  display: none;
+  border: 10px solid var(--plz-color-blue-5);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.spin {
+  border-left: 5px solid var(--plz-color-blue-1);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: girar 1.5s ease-in-out infinite;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 

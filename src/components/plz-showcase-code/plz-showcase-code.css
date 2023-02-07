@@ -1,4 +1,4 @@
-@import '~highlight.js/styles/base16/solarized-light.css';
+@import '~highlight.js/styles/vs.css';
 
 :host {
   --plz-color-black-very-low: #F8F9FA;
