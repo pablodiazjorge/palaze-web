@@ -6,6 +6,8 @@
   box-sizing: border-box;
   display: block;
   border: 1px solid var(--plz-color-black-low);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 div {
@@ -21,4 +23,6 @@ div {
   max-width: 100%;
   resize: horizontal;
   overflow: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
