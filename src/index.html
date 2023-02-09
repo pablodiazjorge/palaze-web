@@ -19,13 +19,13 @@
     <main class="landing-main">
         <!-- Header -->
         <header class="header">
-            <a href="#" class="logo"><img src="./assets/icon/logo-palaze-web.svg" alt="" class="resize-logo"></a>
+            <a class="palaze"><plz-button variant="icon" icon="palaze" size="small" onclick="location.href='index.html'">Icon</plz-button></a>
             <a href="#" class="web">Palaze web</a>
             <nav class="right">
-                <a href="docs.html">Docs</a>
-                <a href="#contact">Contacto</a>
-                <a href="#about-us">Acerca de</a>
-                <a href="https://github.com/pablodiazjorge/palaze-web/tree/develop" target="_blank">Github</a>
+                <a class="right-side" href="docs.html">Docs</a>
+                <a class="right-side" href="#contact">Contacto</a>
+                <a class="right-side" href="#about-us">Acerca de</a>
+                <a class="right-side" href="https://github.com/pablodiazjorge/palaze-web/tree/develop" target="_blank">Github</a>
             </nav>
         </header>
 
@@ -185,27 +185,17 @@
         <footer id="contact" class="footer">
             <div class="footer-container">
                 <div class="footer-content">
-                    <a href="#"><img src="./assets/icon/logo-palaze-web.svg" alt="home" class="home"></a>
+                    <plz-button variant="icon" icon="palaze" onclick="location.href='#'"></plz-button>
                     <div>
                         <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
                             código a través de nuestro Github.</p>
                     </div>
-
                 </div>
                 <div class="footer-content">
                     <h2>Social</h2>
-                    <a href="https://github.com/pablodiazjorge/palaze-web/tree/develop" target="_blank">
-                        <div class="icon-text"><img src="./assets/icon/Icon-github.svg" alt="github-link"
-                                class="icon-social">Github</div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/pablodiazjorge" target="_blank">
-                        <div class="icon-text"><img src="./assets/icon/Icon-linkedin.svg" alt="linkedin"
-                                class="icon-social">LinkedIn</div>
-                    </a>
-                    <a href="mailto:pablodiazjorge@gmail.com" target="_blank">
-                        <div class="icon-text"><img src="./assets/icon/Icon-mail.svg" alt="mail"
-                                class="icon-social">pablodiazjorgegarcia@gmail.com</div>
-                    </a>
+                    <plz-button variant="icon" icon="github" onclick="window.open('https://github.com/pablodiazjorge/palaze-web/tree/develop')">Icon</plz-button>
+                    <plz-button variant="icon" icon="linkedin" onclick="window.open('https://www.linkedin.com/in/pablodiazjorge')">Icon</plz-button>
+                    <plz-button variant="icon" icon="mail" onclick="window.open('mailto:pablodiazjorge@gmail.com')">Icon</plz-button>
                 </div>
             </div>
         </footer>
