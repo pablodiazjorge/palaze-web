@@ -7,42 +7,117 @@
 
     <plz-showcase>
         <plz-showcase-render>
-            <plz-card></plz-card>
+            <plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+                <h3>Abstracto</h3>
+                <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+            </plz-card>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card></plz-card>'>
+        <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+            <h3>Button component</h3>
+            <p>Just the typical text of esample to know if this currently works.</p>
+        </plz-card>'>
         </plz-showcase-code>
     </plz-showcase>
 
     <!-- Ejemplos de las posibilidades del componente-->
     <h2>Ejemplos</h2>
     <plz-divider></plz-divider>
-    <h3>Variantes de la tarjeta</h3>
-    <p>Puedes usar el atributo variant para elegir el estilo de botón que prefieras.</p>
+    <h3>Tarjeta básica</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "simple".</p>
     <plz-showcase>
         <plz-showcase-render>
-            <plz-button>Default</plz-button>
-            <!-- <plz-button color="blue-transparent">Ghost</plz-button> -->
-            <plz-button variant="progress">Progress</plz-button>
-            <plz-button variant="icon" icon="github" size="small">Icon</plz-button>
+            <plz-card variant="simple">
+                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                    a terner solo lo dicta tu imaginación.</p>
+            </plz-card>
+            <plz-card variant="simple">
+                <h3>Tarjeta simple personalizada</h3>
+                <p style="text-align: justify;">En este caso se ha añadido un título "h3" y a continuación un texto "p".
+                    También se le ha pasado por estilo que el texto se encuentre justificado.</p>
+            </plz-card>
+            <plz-card variant="simple">
+                <p style="text-align: center;"><b><i>Tarjeta simple personalizada</i></b></p>
+                <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos en
+                    cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado. </p>
+            </plz-card>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button>Default</plz-button>
-            <plz-button variant="progress">Progress</plz-button>
-            <plz-button variant="icon" icon="github" size="small">Icon</plz-button>'>
+        <plz-showcase-code text-code='<plz-card variant="simple">
+            <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                a terner solo lo dicta tu imaginación.</p>
+        </plz-card>
+        <plz-card variant="simple">
+            <h3>Tarjeta simple personalizada</h3>
+            <p style="text-align: justify;">En este caso se ha añadido un título "h3" y a continuación un texto "p".
+                También se le ha pasado por estilo que el texto se encuentre justificado.</p>
+        </plz-card>
+        <plz-card variant="simple">
+            <p style="text-align: center;"><b><i>Tarjeta simple personalizada</i></b></p>
+            <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos en
+                cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado. </p>
+        </plz-card>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Tarjeta con encabezado</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "header".</p>
+    <plz-showcase>
+        <plz-showcase-render>
+            <plz-card variant="header">
+                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                    a terner solo lo dicta tu imaginación.</p>
+            </plz-card>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-card variant="header">
+            <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                a terner solo lo dicta tu imaginación.</p>
+        </plz-card>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Tarjeta con encabezado</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "footer".</p>
+    <plz-showcase>
+        <plz-showcase-render>
+            <plz-card variant="footer">
+                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                    a terner solo lo dicta tu imaginación.</p>
+            </plz-card>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-card variant="footer">
+            <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                a terner solo lo dicta tu imaginación.</p>
+        </plz-card>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Tarjeta con imagen</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "default".</p>
+    <plz-showcase>
+        <plz-showcase-render>
+            <plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+                <h3>Abstracto</h3>
+                <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+            </plz-card>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+            <h3>Abstracto</h3>
+            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+        </plz-card>'>
         </plz-showcase-code>
     </plz-showcase>
 
     <!-- Colors -->
     <h3>Colores de botón</h3>
     <p>Puedes usar el atributo color para elegir el color de botón que prefieras.</p>
-    
+
     <!-- Radio borde -->
     <h3>Borde de botón</h3>
     <p>Puedes usar el atributo border para elegir la forma del botón que prefieras.</p>
-    
+
     <!-- Tamaño botón -->
     <h3>Tamaño de la tarjeta</h3>
     <p>Puedes usar el atributo size para elegir el tamaño de botón que prefieras.</p>
-    
+
     <!-- Por último un apartado estilo tabla sin bordes donde explicar los slots, atributos y propiedades -->
     <h2>Atributos</h2>
     <plz-divider></plz-divider>
