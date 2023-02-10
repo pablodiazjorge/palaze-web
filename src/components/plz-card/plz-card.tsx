@@ -23,26 +23,26 @@ export class PlzCard {
       </a>
     ) : this.variant == 'simple' ? (
       <div class={`card-${this.variant}`}>
-          <slot></slot>
+        <slot></slot>
       </div>
     ) : this.variant == 'header' ? (
-      <a class={`a-${this.variant + ' ' + 'glow-' + this.hover}`} href={this.url}>
-        <div class={`card-${this.variant}`}>
-          <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})` }}></div>
-          <div class={`text-container-${this.variant}`}>
-            <slot></slot>
-          </div>
+      <div>
+        <div class={`card-${this.variant} header-top`}>
+          <slot name='header-content'></slot>
         </div>
-      </a>
+        <div class={`card-${this.variant} header-bottom`}>
+          <slot name='content'></slot>
+        </div>
+      </div>
     ) : this.variant == 'footer' ? (
-      <a class={`a-${this.variant + ' ' + 'glow-' + this.hover}`} href={this.url}>
-        <div class={`card-${this.variant}`}>
-          <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})` }}></div>
-          <div class={`text-container-${this.variant}`}>
-            <slot></slot>
-          </div>
+      <div>
+        <div class={`card-${this.variant} footer-top`}>
+          <slot name='content'></slot>
         </div>
-      </a>
+        <div class={`card-${this.variant} footer-bottom`}>
+          <slot name='footer-content'></slot>
+        </div>
+      </div>
     ) : null;
   }
 }

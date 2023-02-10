@@ -63,29 +63,45 @@
     <plz-showcase>
         <plz-showcase-render>
             <plz-card variant="header">
-                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+                <div style="display: flex; align-items: center; justify-content: space-between;" slot="header-content">
+                    <p><b>Header</b></p>
+                    <plz-button variant="icon" size="small" icon="palaze"></plz-button>
+                </div>
+                <p slot="content">Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones
+                    que pueda llegar
                     a terner solo lo dicta tu imaginación.</p>
             </plz-card>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-card variant="header">
-            <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
+            <div style="display: flex; align-items: center; justify-content: space-between;" slot="header-content">
+                <p><b>Header</b></p>
+                <plz-button variant="icon" size="small" icon="palaze"></plz-button>
+            </div>
+            <p slot="content">Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones
+                que pueda llegar
                 a terner solo lo dicta tu imaginación.</p>
         </plz-card>'>
         </plz-showcase-code>
     </plz-showcase>
 
-    <h3>Tarjeta con encabezado</h3>
+    <h3>Tarjeta con pie de página</h3>
     <p>Usaremos el atributo variant para elegir el tipo de tarjeta "footer".</p>
     <plz-showcase>
         <plz-showcase-render>
             <plz-card variant="footer">
-                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
-                    a terner solo lo dicta tu imaginación.</p>
+                <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la información que consideres. En este ejemplo ponemos un texto y un botón.</p>
+                <div style="display: flex; align-items: center; justify-content: space-between;" slot="footer-content">
+                    <p><b>Documentación github</b></p>
+                    <plz-button variant="icon" icon="github" size="small"></plz-button>
+                </div>
             </plz-card>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-card variant="footer">
-            <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
-                a terner solo lo dicta tu imaginación.</p>
+            <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la información que consideres. En este ejemplo ponemos un texto y un botón.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;" slot="footer-content">
+                <p><b>Documentación github</b></p>
+                <plz-button variant="icon" icon="github" size="small"></plz-button>
+            </div>
         </plz-card>'>
         </plz-showcase-code>
     </plz-showcase>
@@ -97,30 +113,94 @@
             <plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
                 <h3>Abstracto</h3>
                 <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                <plz-divider></plz-divider>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <p>Ver info</p>
+                    <plz-button color="blue">Info</plz-button>
+                </div>
             </plz-card>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
             <h3>Abstracto</h3>
             <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+            <plz-divider></plz-divider>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <p>Ver info</p>
+                <plz-button color="blue">Info</plz-button>
+            </div>
         </plz-card>'>
         </plz-showcase-code>
     </plz-showcase>
 
+    <h3>Tarjeta con solo imagen</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "default".</p>
+    <plz-showcase>
+        <plz-showcase-render>
+            <plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+                <h3>Abstracto</h3>
+                <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                <plz-divider></plz-divider>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <p>Ver info</p>
+                    <plz-button color="blue">Info</plz-button>
+                </div>
+            </plz-card>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+            <h3>Abstracto</h3>
+            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+            <plz-divider></plz-divider>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <p>Ver info</p>
+                <plz-button color="blue">Info</plz-button>
+            </div>
+        </plz-card>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+
     <!-- Colors -->
-    <h3>Colores de botón</h3>
-    <p>Puedes usar el atributo color para elegir el color de botón que prefieras.</p>
+    <h3>Colores del hover en la tarjeta default</h3>
+    <p>Usaremos el atributo hover para elegir el color de la tarjeta "default" al pasar el cursor por encima.</p>
 
-    <!-- Radio borde -->
-    <h3>Borde de botón</h3>
-    <p>Puedes usar el atributo border para elegir la forma del botón que prefieras.</p>
-
-    <!-- Tamaño botón -->
-    <h3>Tamaño de la tarjeta</h3>
-    <p>Puedes usar el atributo size para elegir el tamaño de botón que prefieras.</p>
+    <plz-showcase-render>
+        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="gray">
+            <h3>Abstracto</h3>
+            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+        </plz-card>
+        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+            <h3>Abstracto</h3>
+            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+        </plz-card>
+        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="green">
+            <h3>Abstracto</h3>
+            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+        </plz-card>
+        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="red">
+            <h3>Abstracto</h3>
+            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+        </plz-card>
+    </plz-showcase-render>
+    <plz-showcase-code text-code='<plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="gray">
+        <h3>Abstracto</h3>
+        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+    </plz-card>
+    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
+        <h3>Abstracto</h3>
+        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+    </plz-card>
+    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="green">
+        <h3>Abstracto</h3>
+        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+    </plz-card>
+    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="red">
+        <h3>Abstracto</h3>
+        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+    </plz-card>'>
+    </plz-showcase-code>
 
     <!-- Por último un apartado estilo tabla sin bordes donde explicar los slots, atributos y propiedades -->
     <h2>Atributos</h2>
-    <plz-divider></plz-divider>
     <table class="table-atr">
         <thead>
             <tr>
@@ -132,28 +212,23 @@
         <tbody>
             <tr>
                 <td>variant</td>
-                <td>Distintas variantes del componente botón</td>
-                <td>'default' - 'icon' - 'progress'</td>
+                <td>Distintas variantes del componente tarjeta</td>
+                <td>'default' - 'simple' - 'header' - 'footer' - 'image'</td>
             </tr>
             <tr>
-                <td>color</td>
+                <td>hover</td>
                 <td>Distintos colores del componente botón</td>
-                <td>'default' - 'blue' - 'green' - 'red'</td>
+                <td>'gray' - 'blue' - 'green' - 'red'</td>
             </tr>
             <tr>
-                <td>size</td>
-                <td>Distintos tamaños del componente botón</td>
-                <td>'default' - 'small' - 'big'</td>
+                <td>image</td>
+                <td>Dirección url de la imagen a colocar en las tarjetas con variante "default" y "image"</td>
+                <td>'./mi-imagen-ejemplo.svg'</td>
             </tr>
             <tr>
-                <td>corners</td>
-                <td>Distintas formas de las esquinas del componente botón</td>
-                <td>'default' - 'low-rounded' - 'rounded' - 'square' - 'circle'</td>
-            </tr>
-            <tr>
-                <td>icon</td>
-                <td>Solo compatible con la variante "icon". Distintos iconos para la variante</td>
-                <td>'github' - 'linkedin' - 'mail' - 'palaze'</td>
+                <td>url</td>
+                <td>Dirección url para crear evento (solo para la variante "default")</td>
+                <td>'./ejemplo.html'</td>
             </tr>
         </tbody>
     </table>

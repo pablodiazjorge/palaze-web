@@ -132,11 +132,67 @@
   ### VARIANT HEADER
 */
 
+.card-header {
+  box-sizing: border-box;
+  display: grid;
+  position: relative;
+  align-self: start;
+  vertical-align: baseline;
+  min-width: 220px;
+  max-width: 300px;
+  max-height: 400px;
+  overflow: auto;
+  border-right: 1px solid var(--plz-color-black-4);
+  border-left: 1px solid var(--plz-color-black-4);
+  border-top: 1px solid var(--plz-color-black-4);
+  padding: 20px;
+}
+
+.header-top {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top-right-radius: var(--plz-border-radius-default);
+  border-top-left-radius: var(--plz-border-radius-default);
+}
+
+.header-bottom {
+  border-bottom-right-radius: var(--plz-border-radius-default);
+  border-bottom-left-radius: var(--plz-border-radius-default);
+  border-bottom: 1px solid var(--plz-color-black-4);
+}
 
 /*
   ### VARIANT FOOTER
 */
 
+.card-footer {
+  box-sizing: border-box;
+  display: grid;
+  position: relative;
+  align-self: start;
+  vertical-align: baseline;
+  min-width: 220px;
+  max-width: 300px;
+  max-height: 400px;
+  overflow: auto;
+  border-right: 1px solid var(--plz-color-black-4);
+  border-left: 1px solid var(--plz-color-black-4);
+  border-top: 1px solid var(--plz-color-black-4);
+  padding: 20px;
+}
+
+.footer-top {
+  border-top-right-radius: var(--plz-border-radius-default);
+  border-top-left-radius: var(--plz-border-radius-default);
+}
+
+.footer-bottom {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom-right-radius: var(--plz-border-radius-default);
+  border-bottom-left-radius: var(--plz-border-radius-default);
+  border-bottom: 1px solid var(--plz-color-black-4);
+}
 
 /*
   HOVER
@@ -155,7 +211,7 @@
 }
 
 .glow-green:hover {
-  background-color: var(--plz-color-blue-5);
+  background-color: var(--plz-color-green-5);
 }
 
 .glow-gray {
@@ -163,7 +219,7 @@
 }
 
 .glow-gray:hover {
-  background-color: var(--plz-color-blue-5);
+  background-color: var(--plz-color-black-4);
 }
 
 .glow-red {
@@ -171,5 +227,5 @@
 }
 
 .glow-red:hover {
-  background-color: var(--plz-color-blue-5);
+  background-color: var(--plz-color-red-4);
 }
