@@ -28,20 +28,24 @@ export class PlzCard {
     ) : this.variant == 'header' ? (
       <div>
         <div class={`card-${this.variant} header-top`}>
-          <slot name='header-content'></slot>
+          <slot name="header-content"></slot>
         </div>
         <div class={`card-${this.variant} header-bottom`}>
-          <slot name='content'></slot>
+          <slot name="content"></slot>
         </div>
       </div>
     ) : this.variant == 'footer' ? (
       <div>
         <div class={`card-${this.variant} footer-top`}>
-          <slot name='content'></slot>
+          <slot name="content"></slot>
         </div>
         <div class={`card-${this.variant} footer-bottom`}>
-          <slot name='footer-content'></slot>
+          <slot name="footer-content"></slot>
         </div>
+      </div>
+    ) : this.variant == 'image' ? (
+      <div>
+        <div class={`container-${this.variant}`} style={{ 'background-image': `url(${this.image})` }}><slot></slot></div>
       </div>
     ) : null;
   }

@@ -80,7 +80,6 @@
   text-decoration: none;
 }
 
-/* Image container */
 .image-container-default {
   display: flex;
   position: relative;
@@ -96,7 +95,6 @@
   overflow: hidden;
 }
 
-/* Text container*/
 .text-container-default {
   box-sizing: border-box;
   display: grid;
@@ -193,6 +191,33 @@
   border-bottom-left-radius: var(--plz-border-radius-default);
   border-bottom: 1px solid var(--plz-color-black-4);
 }
+
+/* 
+  ### VARIANT IMAGE
+*/
+
+.container-image {
+  box-sizing: border-box;
+  display: grid;
+  position: relative;
+  align-self: start;
+  vertical-align: baseline;
+  min-width: 220px;
+  max-width: 300px;
+  max-height: 400px;
+  overflow: auto;
+  border-radius: 24px;
+  background-color: var(--plz-color-black-3);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
 
 /*
   HOVER
