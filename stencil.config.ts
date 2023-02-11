@@ -20,7 +20,8 @@ export const config: Config = {
       copy: [
         { src: 'pages/docs.html', dest: 'docs.html' },
         { src: 'pages/docs-button.html', dest: 'docs-button.html' },
-        { src: 'pages/docs-card.html', dest: 'docs-card.html' }
+        { src: 'pages/docs-card.html', dest: 'docs-card.html' },
+        { src: 'pages/docs-divider.html', dest: 'docs-divider.html' }
       ],
     },
   ],

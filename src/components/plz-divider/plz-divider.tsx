@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'plz-divider',
@@ -6,13 +6,13 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class PlzDivider {
+  @Prop() type: string = 'default';
 
   render() {
     return (
       <Host>
-        <hr class='divider'/>
+        <hr class="divider" />
       </Host>
     );
   }
-
 }
