@@ -1,5 +1,4 @@
 :host {
-  display: block;
   /*    ## FUENTES ##   */
   --plz-font-primary: Padauk, sans-serif;
   /* Peso fuente */
@@ -60,15 +59,21 @@
 
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
+
+  display: block;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.divider {
+hr {
+  display: block;
   margin: 0;
   border: 0;
   height: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-bottom: 10px;
+  padding: 0;
   border-bottom: 1px solid var(--plz-color-black-4);
+  width: 100%;
+  overflow: hidden;
 }

@@ -68,8 +68,7 @@ h2,
 h3,
 p,
 span,
-img,
-hr {
+img {
     margin: 0;
     padding: 0;
 }
@@ -481,7 +480,7 @@ footer {
     box-sizing: border-box;
     border: none;
     border-collapse: collapse;
-    width:100%;
+    width: 100%;
     overflow: auto;
 }
 

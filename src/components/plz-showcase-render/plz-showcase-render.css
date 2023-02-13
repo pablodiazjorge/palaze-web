@@ -11,9 +11,6 @@
 }
 
 div {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   background-color: var(--plz-color-white);
   box-sizing: border-box;
   border-right: 2px solid var(--plz-color-black-low);
@@ -25,4 +22,14 @@ div {
   overflow: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.block {
+  display: block;
 }

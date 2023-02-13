@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'plz-showcase-render',
@@ -6,15 +6,15 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class PlzShowcaseRender {
+  @Prop() display: string = 'inline-flex';
 
   render() {
     return (
       <Host>
-        <div>
+        <div class={this.display}>
           <slot></slot>
         </div>
       </Host>
     );
   }
-
 }

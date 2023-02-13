@@ -1,7 +1,7 @@
 <section class="content-detail">
     <h1>Tarjeta</h1>
     <p class="component-tag">&lt;plz-card&gt; &#124; PlzCard</p> <!-- Dar forma y poner letra de consola-->
-    <plz-divider></plz-divider>
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
     <!-- Pequeña descripción -->
     <p>Las tarjetas sirven para agrupar contenido.</p>
 
@@ -114,7 +114,7 @@
             <plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
                 <h3>Abstracto</h3>
                 <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-                <plz-divider></plz-divider>
+                <plz-divider space-bottom="5"></plz-divider>
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <p>Ver info</p>
                     <plz-button color="blue">Info</plz-button>
@@ -197,6 +197,7 @@
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Posibilidades</th>
+                <th>Por defecto</th>
             </tr>
         </thead>
         <tbody>
@@ -204,21 +205,25 @@
                 <td>variant</td>
                 <td>Distintas variantes del componente tarjeta</td>
                 <td>'default' - 'simple' - 'header' - 'footer' - 'image'</td>
+                <td>'default'</td>
             </tr>
             <tr>
                 <td>hover</td>
                 <td>Distintos colores del componente botón</td>
                 <td>'gray' - 'blue' - 'green' - 'red'</td>
+                <td>'blue'</td>
             </tr>
             <tr>
                 <td>image</td>
                 <td>Dirección url de la imagen a colocar en las tarjetas con variante "default" y "image"</td>
                 <td>'./mi-imagen-ejemplo.svg'</td>
+                <td>black-4</td>
             </tr>
             <tr>
                 <td>url</td>
                 <td>Dirección url para crear evento (solo para la variante "default")</td>
                 <td>'./ejemplo.html'</td>
+                <td>'#'</td>
             </tr>
         </tbody>
     </table>

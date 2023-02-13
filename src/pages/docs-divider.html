@@ -1,187 +1,108 @@
 <section class="content-detail">
     <h1>Separador</h1>
     <p class="component-tag">&lt;plz-divider&gt; &#124; PlzDivider</p> <!-- Dar forma y poner letra de consola-->
-    <plz-divider></plz-divider>
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
     <!-- Pequeña descripción -->
     <p>Los separadores sirven para marcar distintas partes del contenido y hacer que se diferencien.</p>
 
     <plz-showcase>
-        <plz-showcase-render>
-            <plz-divider></plz-divider>
+        <plz-showcase-render display="block">
+            <plz-divider space-top="5" space-bottom="10"></plz-divider>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-divider></plz-divider>'>
+        <plz-showcase-code text-code='<plz-divider space-top="5" space-bottom="10"></plz-divider>'>
         </plz-showcase-code>
     </plz-showcase>
 
     <!-- Ejemplos de las posibilidades del componente-->
     <h2>Ejemplos</h2>
     <plz-divider></plz-divider>
-    <h3>Tarjeta básica</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "simple".</p>
+    <h3>Tipos de separador</h3>
+    <p>Usaremos el atributo type para elegir el tipo de separador que veamos adecuado para nuestro contenido.</p>
     <plz-showcase>
-        <plz-showcase-render>
-            <plz-card variant="simple">
-                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
-                    a terner solo lo dicta tu imaginación.</p>
-            </plz-card>
-            <plz-card variant="simple">
-                <h3>Tarjeta simple personalizada</h3>
-                <p style="text-align: justify;">En este caso se ha añadido un título "h3" y a continuación un texto "p".
-                    También se le ha pasado por estilo que el texto se encuentre justificado.</p>
-            </plz-card>
-            <plz-card variant="simple">
-                <p style="text-align: center;"><b><i>Tarjeta simple personalizada</i></b></p>
-                <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos en
-                    cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado. </p>
-            </plz-card>
+        <plz-showcase-render display="block">
+            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card variant="simple">
-            <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
-                a terner solo lo dicta tu imaginación.</p>
-        </plz-card>
-        <plz-card variant="simple">
-            <h3>Tarjeta simple personalizada</h3>
-            <p style="text-align: justify;">En este caso se ha añadido un título "h3" y a continuación un texto "p".
-                También se le ha pasado por estilo que el texto se encuentre justificado.</p>
-        </plz-card>
-        <plz-card variant="simple">
-            <p style="text-align: center;"><b><i>Tarjeta simple personalizada</i></b></p>
-            <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos en
-                cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado. </p>
-        </plz-card>'>
+        <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>'>
         </plz-showcase-code>
     </plz-showcase>
 
-    <h3>Tarjeta con encabezado</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "header".</p>
+    <h3>Tamaño del separador</h3>
+    <p>Usaremos el atributo height para elegir el ancho del separador.</p>
     <plz-showcase>
         <plz-showcase-render>
-            <plz-card variant="header">
-                <div style="display: flex; align-items: center; justify-content: space-between;" slot="header-content">
-                    <p><b>Header</b></p>
-                    <plz-button variant="icon" size="small" icon="palaze"></plz-button>
-                </div>
-                <p slot="content">Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones
-                    que pueda llegar
-                    a terner solo lo dicta tu imaginación.</p>
-            </plz-card>
+            <plz-divider space-top="10" space-bottom="15" height="7" type="solid"></plz-divider>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card variant="header">
-            <div style="display: flex; align-items: center; justify-content: space-between;" slot="header-content">
-                <p><b>Header</b></p>
-                <plz-button variant="icon" size="small" icon="palaze"></plz-button>
-            </div>
-            <p slot="content">Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones
-                que pueda llegar
-                a terner solo lo dicta tu imaginación.</p>
-        </plz-card>'>
+        <plz-showcase-code
+            text-code='<plz-divider space-top="10" space-bottom="15" height="8" type="solid"></plz-divider>'>
         </plz-showcase-code>
     </plz-showcase>
 
-    <h3>Tarjeta con pie de página</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "footer".</p>
+    <h3>Color del separador</h3>
+    <p>Usaremos el atributo color para elegir el color. Por defecto será black-4 (meter un tooltip aquí).</p>
+    <p>Puedes usar tanto hex, rgb o rgba para el atributo color.</p>
     <plz-showcase>
-        <plz-showcase-render>
-            <plz-card variant="footer">
-                <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la información que
-                    consideres. En este ejemplo ponemos un texto y un botón.</p>
-                <div style="display: flex; align-items: center; justify-content: space-between;" slot="footer-content">
-                    <p><b>Documentación github</b></p>
-                    <plz-button variant="icon" icon="github" size="small"></plz-button>
-                </div>
-            </plz-card>
+        <plz-showcase-render display="block">
+            <plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
+                color="rgb(212,104,62,100%)"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
+                color="rgba(205, 84, 82, 1)"></plz-divider>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card variant="footer">
-            <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la información que consideres. En este ejemplo ponemos un texto y un botón.</p>
-            <div style="display: flex; align-items: center; justify-content: space-between;" slot="footer-content">
-                <p><b>Documentación github</b></p>
-                <plz-button variant="icon" icon="github" size="small"></plz-button>
-            </div>
-        </plz-card>'>
+        <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
+                color="rgb(212,104,62,100%)"></plz-divider>
+            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
+                color="rgba(205, 84, 82, 1)"></plz-divider>'>
         </plz-showcase-code>
     </plz-showcase>
 
-    <h3>Tarjeta con imagen</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "default".</p>
+    <h3>Margen superior e inferior del separador</h3>
+    <p>Usaremos el atributo space-top y space-bottom para añadir espacio entre los elementos y el separador.</p>
     <plz-showcase>
-        <plz-showcase-render>
-            <plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
-                <h3>Abstracto</h3>
-                <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-                <plz-divider></plz-divider>
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <p>Ver info</p>
-                    <plz-button color="blue">Info</plz-button>
-                </div>
-            </plz-card>
+        <plz-showcase-render display="block">
+            <p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
+            <plz-divider space-top="10" space-bottom="20" height="2" type="solid"></plz-divider>
+            <p style="border: 1px solid gray">El separador estará a 20px de este elemento.</p>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-            <plz-divider></plz-divider>
-            <div style="display: flex; align-items: center; justify-content: space-between;">
-                <p>Ver info</p>
-                <plz-button color="blue">Info</plz-button>
-            </div>
-        </plz-card>'>
+        <plz-showcase-code text-code='<p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
+            <plz-divider space-top="10" space-bottom="20" height="2" type="solid"></plz-divider>
+            <p style="border: 1px solid gray">El separador estará a 20px de este elemento.</p>'>
         </plz-showcase-code>
     </plz-showcase>
 
-    <h3>Tarjeta con solo imagen</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "image".</p>
+    <h3>Combinaciones para crear dividers originales</h3>
+    <p>Podemos usar combinaciones de los atributos vistos para crear separadores creativos.</p>
     <plz-showcase>
-        <plz-showcase-render>
-            <plz-card style="width: 350px;" variant="image" image="./assets/icon/card-ejemplo.png" url="docs.html"
-                hover="blue">
-                <p style="color: white; line-height: 1; margin-top: 75px;">Esta es una tarjeta con una imagen de fondo y
-                    texto.</p>
-            </plz-card>
+        <plz-showcase-render display="block">
+            <p>En este caso obtenemos un separador de distintos colores.</p>
+            <plz-divider space-top="10" height="3" type="solid" color="#FACCAC"></plz-divider>
+            <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
+            <plz-divider space-bottom="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <p>En este caso obtenemos uno con colores y tipos distintos que se parece a una cremallera.</p>
+            <plz-divider space-top="10" height="2" type="dotted" color="#FACCAC"></plz-divider>
+            <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
+            <plz-divider space-bottom="10" height="2" type="dotted" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <p>Hay distintas combinaciones para investigar.</p>
+            <plz-divider space-top="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <plz-divider height="2" type="dashed" color="rgb(212,104,62,100%)"></plz-divider>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card style="width: 350px;" variant="image" image="./assets/icon/card-ejemplo.png" url="docs.html" hover="blue">
-            <p style="color: white; line-height: 1; margin-top: 75px;">Esta es una tarjeta con una imagen de fondo y texto.</p>
-        </plz-card>'>
+        <plz-showcase-code text-code='<p>En este caso obtenemos un separador de distintos colores.</p>
+            <plz-divider space-top="10" height="3" type="solid" color="#FACCAC"></plz-divider>
+            <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
+            <plz-divider space-bottom="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <p>En este caso obtenemos uno con colores y tipos distintos que se parece a una cremallera.</p>
+            <plz-divider space-top="10" height="2" type="dotted" color="#FACCAC"></plz-divider>
+            <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
+            <plz-divider space-bottom="10" height="2" type="dotted" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <p>Hay distintas combinaciones para investigar.</p>
+            <plz-divider space-top="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <plz-divider height="2" type="dashed" color="rgb(212,104,62,100%)"></plz-divider>>'>
         </plz-showcase-code>
     </plz-showcase>
-
-    <!-- Colors -->
-    <h3>Colores del hover en la tarjeta default</h3>
-    <p>Usaremos el atributo hover para elegir el color de la tarjeta "default" al pasar el cursor por encima.</p>
-
-    <plz-showcase-render>
-        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="gray">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="green">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-        <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="red">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-    </plz-showcase-render>
-    <plz-showcase-code text-code='<plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="gray">
-        <h3>Abstracto</h3>
-        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-    </plz-card>
-    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
-        <h3>Abstracto</h3>
-        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-    </plz-card>
-    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="green">
-        <h3>Abstracto</h3>
-        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-    </plz-card>
-    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="red">
-        <h3>Abstracto</h3>
-        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-    </plz-card>'>
-    </plz-showcase-code>
 
     <!-- Por último un apartado estilo tabla sin bordes donde explicar los slots, atributos y propiedades -->
     <h2>Atributos</h2>
@@ -191,28 +112,33 @@
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Posibilidades</th>
+                <th>Por defecto</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>variant</td>
-                <td>Distintas variantes del componente tarjeta</td>
-                <td>'default' - 'simple' - 'header' - 'footer' - 'image'</td>
+                <td>type</td>
+                <td>Distintas tipos del componente separador</td>
+                <td>'solid' - 'dashed' - 'dotted'</td>
+                <td>'solid'</td>
             </tr>
             <tr>
-                <td>hover</td>
-                <td>Distintos colores del componente botón</td>
-                <td>'gray' - 'blue' - 'green' - 'red'</td>
+                <td>color</td>
+                <td>Distintos colores del componente separador</td>
+                <td>hex, rgb, rgba</td>
+                <td>black-4</td>
             </tr>
             <tr>
-                <td>image</td>
-                <td>Dirección url de la imagen a colocar en las tarjetas con variante "default" y "image"</td>
-                <td>'./mi-imagen-ejemplo.svg'</td>
+                <td>space-top</td>
+                <td>Separación superior del componente separador</td>
+                <td>Number</td>
+                <td>'0'</td>
             </tr>
             <tr>
-                <td>url</td>
-                <td>Dirección url para crear evento (solo para la variante "default")</td>
-                <td>'./ejemplo.html'</td>
+                <td>space-bottom</td>
+                <td>Separación inferior del componente separador</td>
+                <td>Number</td>
+                <td>'0'</td>
             </tr>
         </tbody>
     </table>

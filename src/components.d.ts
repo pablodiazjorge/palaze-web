@@ -7,13 +7,27 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlzButton {
+        "color"?: string;
         "corners"?: string;
+        "icon"?: string;
         "size"?: string;
         "variant"?: string;
+    }
+    interface PlzCard {
+        "hover": string;
+        "image": string;
+        "url": string;
+        "variant": string;
     }
     interface PlzColors {
     }
     interface PlzDivider {
+        "color": string;
+        "height": string;
+        "spaceBottom": string;
+        "spaceTop": string;
+        "type": string;
+        "variant": string;
     }
     interface PlzHero {
     }
@@ -30,6 +44,7 @@ export namespace Components {
         "textCode": string;
     }
     interface PlzShowcaseRender {
+        "display": string;
     }
     interface PlzSpinner {
     }
@@ -43,6 +58,12 @@ declare global {
     var HTMLPlzButtonElement: {
         prototype: HTMLPlzButtonElement;
         new (): HTMLPlzButtonElement;
+    };
+    interface HTMLPlzCardElement extends Components.PlzCard, HTMLStencilElement {
+    }
+    var HTMLPlzCardElement: {
+        prototype: HTMLPlzCardElement;
+        new (): HTMLPlzCardElement;
     };
     interface HTMLPlzColorsElement extends Components.PlzColors, HTMLStencilElement {
     }
@@ -112,6 +133,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "plz-button": HTMLPlzButtonElement;
+        "plz-card": HTMLPlzCardElement;
         "plz-colors": HTMLPlzColorsElement;
         "plz-divider": HTMLPlzDividerElement;
         "plz-hero": HTMLPlzHeroElement;
@@ -127,13 +149,27 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PlzButton {
+        "color"?: string;
         "corners"?: string;
+        "icon"?: string;
         "size"?: string;
+        "variant"?: string;
+    }
+    interface PlzCard {
+        "hover"?: string;
+        "image"?: string;
+        "url"?: string;
         "variant"?: string;
     }
     interface PlzColors {
     }
     interface PlzDivider {
+        "color"?: string;
+        "height"?: string;
+        "spaceBottom"?: string;
+        "spaceTop"?: string;
+        "type"?: string;
+        "variant"?: string;
     }
     interface PlzHero {
     }
@@ -150,6 +186,7 @@ declare namespace LocalJSX {
         "textCode"?: string;
     }
     interface PlzShowcaseRender {
+        "display"?: string;
     }
     interface PlzSpinner {
     }
@@ -158,6 +195,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "plz-button": PlzButton;
+        "plz-card": PlzCard;
         "plz-colors": PlzColors;
         "plz-divider": PlzDivider;
         "plz-hero": PlzHero;
@@ -176,6 +214,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "plz-button": LocalJSX.PlzButton & JSXBase.HTMLAttributes<HTMLPlzButtonElement>;
+            "plz-card": LocalJSX.PlzCard & JSXBase.HTMLAttributes<HTMLPlzCardElement>;
             "plz-colors": LocalJSX.PlzColors & JSXBase.HTMLAttributes<HTMLPlzColorsElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
             "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
