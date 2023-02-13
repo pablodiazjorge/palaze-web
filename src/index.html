@@ -33,14 +33,14 @@
 
         <!-- Hero section -->
         <section>
-            <div class="hero">
+            <plz-hero image="../assets/icon/Hero-img.svg">
                 <div class="hero-content">
                     <h1>Palaze web compononents</h1>
                     <p>Elevate your website's design and functionality with our collection of native web components. Our
                         components are lightweight, fast-loading, and easy to implement, making them the perfect
                         solution for any website.</p>
                 </div>
-            </div>
+            </plz-hero>
         </section>
 
         <!-- sub-hero section -->
@@ -166,17 +166,15 @@
                 </div>
             </div>
         </section>
-
-        <footer id="contact" class="footer">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <plz-button variant="icon" icon="palaze" onclick="location.href='#'"></plz-button>
-                    <div>
-                        <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
-                            código a través de nuestro Github.</p>
-                    </div>
+        <!-- class="footer" -->
+        <footer id="contact">
+            <plz-hero variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
+                <plz-button slot="first-column" variant="icon" icon="palaze" onclick="location.href='#'"></plz-button>
+                <div slot="first-column" class="footer-content">
+                    <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                        código a través de nuestro Github.</p>
                 </div>
-                <div class="footer-content">
+                <div slot="second-column" class="footer-content">
                     <h2>Social</h2>
                     <plz-button variant="icon" icon="github"
                         onclick="window.open('https://github.com/pablodiazjorge/palaze-web/tree/develop')">Icon</plz-button>
@@ -185,7 +183,7 @@
                     <plz-button variant="icon" icon="mail"
                         onclick="window.open('mailto:pablodiazjorge@gmail.com')">Icon</plz-button>
                 </div>
-            </div>
+            </plz-hero>
         </footer>
     </main>
 </body>
