@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'plz-menu-item',
@@ -7,15 +7,13 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class PlzMenuItem {
 
-  @Prop() link: string = "#";
-
   render() {
     return (
-      <li>
-        <a href={this.link}>
+      <Host>
+        <li>
           <slot></slot>
-        </a>
-      </li>
+        </li>
+      </Host>
     );
   }
 }

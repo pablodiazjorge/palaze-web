@@ -1,0 +1,86 @@
+<section class="content-detail">
+    <h1>Menu</h1>
+    <p class="component-tag">&lt;plz-hero&gt; &#124; PlzHero</p> <!-- Dar forma y poner letra de consola-->
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
+    <!-- Pequeña descripción -->
+    <p>El componente menu sirve para agrupar distintos elementos con una estructura concreta.</p>
+
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-menu style="font-size: 20px;">
+                <plz-menu-item>Componentes</plz-menu-item>
+                <plz-divider space-top="2" space-bottom="5" color="#0096C7"></plz-divider>
+                <plz-menu-item>Boton</plz-menu-item>
+                <plz-menu-item>Tarjeta</plz-menu-item>
+                <plz-menu-item>Separador</plz-menu-item>
+                <plz-menu-item>Heroe</plz-menu-item>
+                <plz-menu-item>Menu</plz-menu-item>
+            </plz-menu>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-menu>
+            <plz-menu-item>Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item>Boton</plz-menu-item>
+            <plz-menu-item>Tarjeta</plz-menu-item>
+            <plz-menu-item>Separador</plz-menu-item>
+            <plz-menu-item>Heroe</plz-menu-item>
+            <plz-menu-item>Menu</plz-menu-item>
+        </plz-menu>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <!-- Ejemplos de las posibilidades del componente-->
+    <h2>Ejemplos</h2>
+    <plz-divider></plz-divider>
+    <h3>Heroe simple</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de heroe "simple".</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-hero variant="simple" height="400">
+                <h1 style="line-height: 1;">Hero</h1>
+                <p>Aquí suele ir una pequeña introducción al contenido de tu landing page, algo que capte la atención de
+                    los usuarios al visitar tu web.</p>
+            </plz-hero>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-hero variant="simple" height="400">
+            <h1 style="line-height: 1;">Hero</h1>
+            <p>Aquí suele ir una pequeña introducción al contenido de tu landing page, algo que capte la atención de
+                los usuarios al visitar tu web.</p>
+        </plz-hero>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <!-- Por último un apartado estilo tabla sin bordes donde explicar los slots, atributos y propiedades -->
+    <h2>Atributos</h2>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Posibilidades</th>
+                <th>Por defecto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>variant</td>
+                <td>Distintas variantes del componente heroe</td>
+                <td>'default' - 'simple' - 'image' - 'two-column'</td>
+                <td>'default'</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Puedes determinar la altura del componente.</td>
+                <td>px</td>
+                <td>'600px'</td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td>Dirección url de la imagen a colocar en el componente heroe con la variante "default", "image" o
+                    "two-column"</td>
+                <td>'./mi-imagen-ejemplo.svg'</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

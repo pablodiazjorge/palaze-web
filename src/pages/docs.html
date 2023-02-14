@@ -15,16 +15,35 @@
 </head>
 
 <script>
-    var toggled = true;
+    document.addEventListener('DOMContentLoaded', () => {
+        const lis = document.querySelectorAll('#sidebar ul li');
+        let activeLi = null;
+
+        lis.forEach(li => {
+            li.addEventListener('click', () => {
+                if (activeLi) {
+                    activeLi.classList.remove('sidebar-selected');
+                }
+                li.classList.add('sidebar-selected');
+                activeLi = li;
+            });
+        });
+    });
+
+    var toggled = false;
+    let sideWidth = 0;
     function toggle() {
         if (toggled === false) {
             toggled = true;
             document.getElementById("sidebar").style.width = "0";
             document.getElementById("main").style.left = "20%";
+            document.getElementById("sidebar").style.borderLeft = "none";
         } else if (toggled === true) {
             toggled = false;
+            sideWidth = document.getElementById("main").clientLeft;
             document.getElementById("sidebar").style.width = "15%";
             document.getElementById("main").style.left = "30%";
+            document.getElementById("sidebar").style.borderLeft = "1px solid #495057";
         }
     }
 
@@ -38,20 +57,23 @@
         };
         xhr.send();
     }
+
 </script>
 
 <body>
 
     <!--  Sidebar -->
     <nav id="sidebar" class="sidebar">
-        <plz-menu>
-            <plz-menu-item onclick="location.href='docs.html'">Componentes</plz-menu-item>
+        <ul>
+            <img src="../assets/icon/log-mask-overview.svg" alt="">
+            <li onclick="location.href='docs.html'">Componentes</li>
             <plz-divider></plz-divider>
-            <plz-menu-item onclick="loadSection('docs-button.html')">Boton</plz-menu-item>
-            <plz-menu-item onclick="loadSection('docs-card.html')">Tarjeta</plz-menu-item>
-            <plz-menu-item onclick="loadSection('docs-divider.html')">Separador</plz-menu-item>
-            <plz-menu-item onclick="loadSection('docs-hero.html')">Heroe</plz-menu-item>
-        </plz-menu>
+            <li onclick="loadSection('docs-button.html')">Boton</li>
+            <li onclick="loadSection('docs-card.html')">Tarjeta</li>
+            <li onclick="loadSection('docs-divider.html')">Separador</li>
+            <li onclick="loadSection('docs-hero.html')">Heroe</li>
+            <li onclick="loadSection('docs-menu.html')">Menu</li>
+        </ul>
     </nav>
 
     <button class="button-sidebar" onclick="toggle()">&#9776</button>
