@@ -376,7 +376,7 @@ header a.palaze {
 .sidebar {
     background-color: var(--plz-color-white);
     height: 100%;
-    width: 15%;
+    width: 275px;
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
@@ -413,7 +413,7 @@ header a.palaze {
 }
 
 .sidebar img {
-    width: 240px;
+    width: 225px;
     border-radius: var(--plz-border-radius-low-rounded);
     margin-left: 28px;
 }

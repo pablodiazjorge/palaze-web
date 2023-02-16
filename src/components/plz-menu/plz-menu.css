@@ -1,19 +1,15 @@
 :host {
   display: block;
+  --plz-color-black-5: #d4d4d8;
 }
 
 ul {
   box-sizing: border-box;
   list-style: none;
   list-style-type: none;
+  border: 1px solid var(--plz-color-black-5);
   margin: 0;
   padding: 0;
-}
-
-.content {
-  box-sizing: border-box;
-  margin-top: 20px;
-  padding-top: 25px;
-  padding-bottom: 40px;
-  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

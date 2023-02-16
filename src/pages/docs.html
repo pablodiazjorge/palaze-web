@@ -41,7 +41,7 @@
         } else if (toggled === true) {
             toggled = false;
             sideWidth = document.getElementById("main").clientLeft;
-            document.getElementById("sidebar").style.width = "15%";
+            document.getElementById("sidebar").style.width = "270px";
             document.getElementById("main").style.left = "30%";
             document.getElementById("sidebar").style.borderLeft = "1px solid #495057";
         }
@@ -52,6 +52,7 @@
         xhr.open("GET", file, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
+                window.scrollTo(0, 0);
                 document.querySelector("#main").innerHTML = xhr.responseText;
             }
         };
