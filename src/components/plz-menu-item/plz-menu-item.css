@@ -69,7 +69,7 @@
   margin: 0;
 }
 
-li {
+.item-default {
   box-sizing: border-box;
   padding: 0;
   margin-left: 0;
@@ -79,6 +79,40 @@ li {
   list-style: none;
 }
 
+.item-home {
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  cursor: pointer;
+  list-style: none;
+}
+
+img {
+  height: 23px;
+  width: 23px;
+}
+
 :host(:hover) {
   background-color: var(--plz-color-black-4);
+}
+
+
+.grid-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 25px auto;
+  justify-items: stretch;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-right: 5px;
 }
