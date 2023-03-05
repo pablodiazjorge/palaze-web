@@ -7,11 +7,35 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class PlzShowcaseRender {
   @Prop() display: string = 'inline-flex';
+  @Prop() height: string = '';
+  @Prop() paddingTop: string = '10';
+  @Prop() paddingBottom: string = '10';
+  @Prop() paddingRight: string = '10';
+  @Prop() paddingLeft: string = '10';
+  @Prop() verticalAlign: string = 'center';
 
   render() {
-    return (
+    return this.height != '' ? (
       <Host>
-        <div class={this.display}>
+        <div
+          class={this.display}
+          style={{
+            height: `${this.height}px`,
+            paddingTop: `${this.paddingTop}px`,
+            padding: `${this.paddingBottom}px`,
+            paddingLeft: `${this.paddingLeft}px`,
+            paddingRight: `${this.paddingRight}px`,
+            alignItems: `${this.verticalAlign}`,
+          }}
+        >
+          <slot></slot>
+        </div>
+      </Host>
+    ) : (
+      <Host>
+        <div
+          class={this.display}
+          style={{ paddingTop: `${this.paddingTop}px`, padding: `${this.paddingBottom}px`, paddingLeft: `${this.paddingLeft}px`, paddingRight: `${this.paddingRight}px`, alignItems: `${this.verticalAlign}` }}>
           <slot></slot>
         </div>
       </Host>

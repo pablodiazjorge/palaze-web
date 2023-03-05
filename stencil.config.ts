@@ -24,7 +24,8 @@ export const config: Config = {
         { src: 'pages/docs-divider.html', dest: 'docs-divider.html' },
         { src: 'pages/docs-hero.html', dest: 'docs-hero.html' },
         { src: 'pages/docs-menu.html', dest: 'docs-menu.html' },
-        { src: 'pages/docs-menu-item.html', dest: 'docs-menu-item.html' }
+        { src: 'pages/docs-menu-item.html', dest: 'docs-menu-item.html' },
+        { src: 'pages/docs-tooltip.html', dest: 'docs-tooltip.html' }
       ],
     },
   ],

@@ -6,15 +6,25 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzTooltip {
-
-  @Prop() clase: string = 'tooltip';
+  @Prop() variant: string = 'default';
+  @Prop() position: string = 'bottom';
+  @Prop() adjust: string = '';
 
   render() {
-    return (
+    return this.adjust != '' && this.variant == 'default' ? (
       <div class="container">
         <slot></slot>
-        <div class={this.clase}><slot name='tooltip'></slot></div>
+        <div class={`tooltip ${this.position} `} style={{ transform: `translate(-50%,${this.adjust}%` }}>
+          <slot name="tooltip"></slot>
+        </div>
       </div>
-    );
+    ) : this.variant == 'default' ? (
+      <div class="container">
+        <slot></slot>
+        <div class={`tooltip ${this.position} `}>
+          <slot name="tooltip"></slot>
+        </div>
+      </div>
+    ) : null;
   }
 }

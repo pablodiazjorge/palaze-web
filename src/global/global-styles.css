@@ -268,6 +268,7 @@ header a.palaze {
     height: 50px;
     color: var(--plz-color-white);
     background: var(--plz-color-black-2);
+    border: none;
     border-radius: 20px;
     font-size: var(--plz-font-size-sub-section);
     cursor: pointer;
@@ -374,6 +375,7 @@ header a.palaze {
 */
 
 .sidebar {
+    z-index: 1;
     background-color: var(--plz-color-white);
     height: 100%;
     width: 275px;
@@ -428,6 +430,7 @@ header a.palaze {
 
 
 .button-sidebar {
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
@@ -464,6 +467,7 @@ header a.palaze {
     border-collapse: collapse;
     width: 100%;
     overflow: auto;
+    overflow-x: scroll;
 }
 
 .table-atr thead th {

@@ -1,0 +1,116 @@
+<section class="content-detail">
+    <h1>Tooltip</h1>
+    <p class="component-tag">&lt;plz-tooltip&gt; &#124; PlzTooltip</p> <!-- Dar forma y poner letra de consola-->
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
+    <!-- Pequeña descripción -->
+    <p>El componente tooltip consiste en un mensaje emergente que aparece en pantalla cuando el usuario pasa el cursor
+        sobre un elemento concreto.</p>
+
+    <plz-showcase>
+        <plz-showcase-render display="block" height="100" padding-top="20" padding-left="20" padding-top="20">
+            <p style="display: inline-block;">Puedes recorrer el cursor hasta</p>
+            <plz-tooltip style="display: inline-block;">
+                <p style="display: inline-block;">aquí,</p>
+                <p slot="tooltip">tool1</p>
+            </plz-tooltip>
+            <p style="display: inline-block;">o seguir por</p>
+            <plz-tooltip style="display: inline-block;">
+                <p style="display: inline-block;">aquí</p>
+                <p slot="tooltip">tool2</p>
+            </plz-tooltip>
+            <p style="display: inline-block;">hasta encontrar el tooltip.</p>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<p style="display: inline-block;">Puedes recorrer el cursor hasta</p>
+            <plz-tooltip style="display: inline-block;">
+                <p style="display: inline-block;">aquí,</p>
+                <p slot="tooltip">tool1</p>
+            </plz-tooltip>
+            <p style="display: inline-block;">o seguir por</p>
+            <plz-tooltip style="display: inline-block;">
+                <p style="display: inline-block;">aquí</p>
+                <p slot="tooltip">tool2</p>
+            </plz-tooltip>
+            <p style="display: inline-block;">hasta encontrar el tooltip.</p>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <!-- Ejemplos de las posibilidades del componente-->
+    <h2>Ejemplos</h2>
+    <plz-divider></plz-divider>
+    <h3>Distintas posiciones para el tooltip</h3>
+    <p>Usaremos el atributo position para elegir la posición del tooltip entre "top" y "bottom".</p>
+    <p>Como se puede observar, el componente tooltip puede adaptarse a distintos tipos de elementos, ya sean botones,
+        icones, imagenes, textos, etc. Recalcar que lo más normal es utilizar palabras o frases concretas y
+        resaltar información adicional interesante.</p>
+    <plz-showcase>
+        <plz-showcase-render height="250" padding-top="0" padding-left="25">
+            <plz-tooltip adjust="80">
+                <plz-button variant="icon" icon="github" size="default"></plz-button>
+                <p slot="tooltip" style="font-size: 20px;">icon</p>
+            </plz-tooltip>
+            <plz-tooltip position="top" adjust="-160">
+                <p>Texto ejemplo</p>
+                <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
+            </plz-tooltip>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-tooltip adjust="80">
+            <plz-button variant="icon" icon="github" size="default"></plz-button>
+            <p slot="tooltip" style="font-size: 20px;">icon</p>
+        </plz-tooltip>
+        <plz-tooltip position="top" adjust="-160">
+            <p>Texto ejemplo</p>
+            <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
+        </plz-tooltip>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Distintos usos para el tooltip</h3>
+    <p>En este ejemplo a continuación se observa que en el tooltip pueden aparecer otros elementos a parte de texto
+        simple. Se puede introducir en el tooltip un elemento link para poder accder a más documentación o lo que
+        consideres importante. También puedes dejar libre tu imaginación y añadir una pequeña separación en el texto
+        para hacerlo más extenso, aunque no suele ser este el uso para el componente tooltip.</p>
+    <p>Una forma común de hacer uso del tooltip es como en este ejemplo de la derecha donde aparece un link en el
+        tooltip</p>
+    <plz-showcase>
+        <plz-showcase-render vertical-align="normal" height="450" padding-bottom="100" padding-left="20" padding-bottom="0">
+            <plz-tooltip position="bottom" adjust="15">
+                <p style="padding-left: 20px; padding-right: 20px;">Esto es diferente pero puede hacerse.</p>
+                <p slot="tooltip">Info</p>
+                <plz-divider slot="tooltip"></plz-divider>
+                <p slot="tooltip" style="text-align: justify;">Se suelen usar textos pequeños y dependiendo de la página,
+                    podrías querer llegar a utilizarlo de esta forma.</p>
+                <plz-button slot="tooltip">Info</plz-button>
+            </plz-tooltip>
+
+            <plz-tooltip adjust="5">
+                <plz-button variant="icon" icon="github" size="default"></plz-button>
+                <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
+            </plz-tooltip>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-tooltip style="padding: 50px;">
+            <plz-button variant="icon" icon="github" size="default"></plz-button>
+            <p slot="tooltip">Es un icon button</p>
+        </plz-tooltip>'>
+        </plz-showcase-code>
+    </plz-showcase>
+    <!-- Por último un apartado estilo tabla sin bordes donde explicar los slots, atributos y propiedades -->
+    <h2>Atributos</h2>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Posibilidades</th>
+                <th>Por defecto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>type</td>
+                <td>Distintas tipos del componente menu-item</td>
+                <td>'default' - 'home' - 'user' - 'settings' - 'message'</td>
+                <td>'default'</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
