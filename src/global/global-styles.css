@@ -508,6 +508,7 @@ header a.palaze {
 
 .content-detail p {
     font-size: var(--plz-font-size-sub-section);
+    text-align: justify;
 }
 
 /* .resize {

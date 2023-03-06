@@ -13,6 +13,7 @@ export class PlzShowcaseRender {
   @Prop() paddingRight: string = '10';
   @Prop() paddingLeft: string = '10';
   @Prop() verticalAlign: string = 'center';
+  @Prop() gap: string = '10';
 
   render() {
     return this.height != '' ? (
@@ -26,6 +27,7 @@ export class PlzShowcaseRender {
             paddingLeft: `${this.paddingLeft}px`,
             paddingRight: `${this.paddingRight}px`,
             alignItems: `${this.verticalAlign}`,
+            gap: `${this.gap}px`,
           }}
         >
           <slot></slot>
@@ -35,7 +37,7 @@ export class PlzShowcaseRender {
       <Host>
         <div
           class={this.display}
-          style={{ paddingTop: `${this.paddingTop}px`, padding: `${this.paddingBottom}px`, paddingLeft: `${this.paddingLeft}px`, paddingRight: `${this.paddingRight}px`, alignItems: `${this.verticalAlign}` }}>
+          style={{ paddingTop: `${this.paddingTop}px`, padding: `${this.paddingBottom}px`, paddingLeft: `${this.paddingLeft}px`, paddingRight: `${this.paddingRight}px`, alignItems: `${this.verticalAlign}`, gap: `${this.gap}px` }}>
           <slot></slot>
         </div>
       </Host>

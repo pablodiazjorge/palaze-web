@@ -43,14 +43,14 @@
         icones, imagenes, textos, etc. Recalcar que lo más normal es utilizar palabras o frases concretas y
         resaltar información adicional interesante.</p>
     <plz-showcase>
-        <plz-showcase-render height="250" padding-top="0" padding-left="25">
+        <plz-showcase-render height="250" padding-top="0" padding-left="25" gap="60">
             <plz-tooltip adjust="80">
                 <plz-button variant="icon" icon="github" size="default"></plz-button>
                 <p slot="tooltip" style="font-size: 20px;">icon</p>
             </plz-tooltip>
             <plz-tooltip position="top" adjust="-160">
                 <p>Texto ejemplo</p>
-                <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
+                <p slot="tooltip">tool</p>
             </plz-tooltip>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-tooltip adjust="80">
@@ -69,27 +69,73 @@
         simple. Se puede introducir en el tooltip un elemento link para poder accder a más documentación o lo que
         consideres importante. También puedes dejar libre tu imaginación y añadir una pequeña separación en el texto
         para hacerlo más extenso, aunque no suele ser este el uso para el componente tooltip.</p>
-    <p>Una forma común de hacer uso del tooltip es como en este ejemplo de la derecha donde aparece un link en el
-        tooltip</p>
+    <p>Una forma común de hacer uso del tooltip es como en este ejemplo de la derecha (icono github) donde aparece un
+        link en el
+        tooltip.</p>
     <plz-showcase>
-        <plz-showcase-render vertical-align="normal" height="450" padding-bottom="100" padding-left="20" padding-bottom="0">
-            <plz-tooltip position="bottom" adjust="15">
+        <plz-showcase-render vertical-align="normal" height="450" padding-bottom="100" padding-left="20"
+            padding-bottom="0" gap="60">
+            <plz-tooltip position="bottom" adjust="8">
                 <p style="padding-left: 20px; padding-right: 20px;">Esto es diferente pero puede hacerse.</p>
                 <p slot="tooltip">Info</p>
                 <plz-divider slot="tooltip"></plz-divider>
-                <p slot="tooltip" style="text-align: justify;">Se suelen usar textos pequeños y dependiendo de la página,
+                <p slot="tooltip" style="text-align: justify;">Se suelen usar textos pequeños y dependiendo de la
+                    página,
                     podrías querer llegar a utilizarlo de esta forma.</p>
                 <plz-button slot="tooltip">Info</plz-button>
             </plz-tooltip>
-
-            <plz-tooltip adjust="5">
+            <plz-tooltip adjust="80">
                 <plz-button variant="icon" icon="github" size="default"></plz-button>
                 <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
             </plz-tooltip>
         </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-tooltip style="padding: 50px;">
+        <plz-showcase-code text-code='<plz-tooltip position="bottom" adjust="8">
+            <p style="padding-left: 20px; padding-right: 20px;">Esto es diferente pero puede hacerse.</p>
+            <p slot="tooltip">Info</p>
+            <plz-divider slot="tooltip"></plz-divider>
+            <p slot="tooltip" style="text-align: justify;">Se suelen usar textos pequeños y dependiendo de la página,
+                podrías querer llegar a utilizarlo de esta forma.</p>
+            <plz-button slot="tooltip">Info</plz-button>
+        </plz-tooltip>
+        <plz-tooltip adjust="80">
             <plz-button variant="icon" icon="github" size="default"></plz-button>
-            <p slot="tooltip">Es un icon button</p>
+            <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
+        </plz-tooltip>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Ajustes para el tooltip</h3>
+    <p>Usaremos el atributo adjust para modificar la altura del tooltip respecto al elemento.</p>
+    <p>Debido a que en el desarrollo web hay múltiples formas de construir una web, se ha considerado el poder modificar
+        la distancia de aparición del tooltip respecto al elemento para ajustarlo a los distintos casos que se puedan
+        producir.</p>
+    <plz-showcase>
+        <plz-showcase-render vertical-align="normal" height="300" padding-bottom="100" padding-left="20"
+            padding-bottom="0" gap="50">
+            <plz-tooltip position="bottom">
+                <p>Ajuste normal</p>
+                <p slot="tooltip">tool</p>
+            </plz-tooltip>
+            <plz-tooltip position="bottom" adjust="120">
+                <p>Ajuste diferente</p>
+                <p slot="tooltip">tool</p>
+            </plz-tooltip>
+            <plz-tooltip position="bottom" adjust="150">
+                <p>Ajuste diferente</p>
+                <p slot="tooltip">tool</p>
+            </plz-tooltip>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-tooltip position="bottom">
+            <p>Ajuste normal</p>
+            <p slot="tooltip">tool</p>
+        </plz-tooltip>
+        <plz-tooltip position="bottom" adjust="120">
+            <p>Ajuste diferente</p>
+            <p slot="tooltip">tool</p>
+        </plz-tooltip>
+        <plz-tooltip position="bottom" adjust="150">
+            <p>Ajuste diferente</p>
+            <p slot="tooltip">tool</p>
         </plz-tooltip>'>
         </plz-showcase-code>
     </plz-showcase>
@@ -106,10 +152,16 @@
         </thead>
         <tbody>
             <tr>
-                <td>type</td>
-                <td>Distintas tipos del componente menu-item</td>
-                <td>'default' - 'home' - 'user' - 'settings' - 'message'</td>
-                <td>'default'</td>
+                <td>position</td>
+                <td>Posiciones para el tooltip respecto al elemento.</td>
+                <td>'top' - 'bottom'</td>
+                <td>'bottom'</td>
+            </tr>
+            <tr>
+                <td>adjust</td>
+                <td>Ajuste de la posición del tooltip respecto al elemento.</td>
+                <td>'+x' - '-x'</td>
+                <td></td>
             </tr>
         </tbody>
     </table>
