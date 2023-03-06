@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `clase`  | `clase`   |             | `string` | `'tooltip'` |
+| Property   | Attribute  | Description | Type     | Default     |
+| ---------- | ---------- | ----------- | -------- | ----------- |
+| `adjust`   | `adjust`   |             | `string` | `''`        |
+| `position` | `position` |             | `string` | `'bottom'`  |
+| `variant`  | `variant`  |             | `string` | `'default'` |
 
 
 ----------------------------------------------

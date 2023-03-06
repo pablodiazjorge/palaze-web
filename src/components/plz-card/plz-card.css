@@ -100,8 +100,8 @@
   display: grid;
   position: relative;
   align-self: start;
-  margin: 20px;
-  margin-top: 15px;
+  padding: 20px;
+  padding-top: 15px;
   cursor: pointer;
   font-size: 16px;
   vertical-align: baseline;

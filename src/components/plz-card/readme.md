@@ -13,6 +13,7 @@
 | `image`   | `image`   |             | `string` | `''`        |
 | `url`     | `url`     |             | `string` | `'#'`       |
 | `variant` | `variant` |             | `string` | `'default'` |
+| `width`   | `width`   |             | `string` | `'220'`     |
 
 
 ----------------------------------------------

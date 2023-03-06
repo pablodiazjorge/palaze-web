@@ -10,13 +10,14 @@ export class PlzCard {
   @Prop() url: string = '#';
   @Prop() image: string = '';
   @Prop() hover: string = 'blue';
+  @Prop() width: string = '220';
 
   render() {
     return this.variant == 'default' ? (
       <a class={`a-${this.variant + ' ' + 'glow-' + this.hover}`} href={this.url}>
         <div>
-          <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})` }}></div>
-          <div class={`text-container-${this.variant}`}>
+          <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})`,'width': `${this.width}px` }}></div>
+          <div class={`text-container-${this.variant}`} style= {{'width': `${this.width}px`}}>
             <slot></slot>
           </div>
         </div>

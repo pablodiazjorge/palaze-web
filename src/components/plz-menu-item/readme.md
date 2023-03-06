@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default |
-| -------- | --------- | ----------- | -------- | ------- |
-| `link`   | `link`    |             | `string` | `"#"`   |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `type`   | `type`    |             | `string` | `'default'` |
 
 
 ----------------------------------------------

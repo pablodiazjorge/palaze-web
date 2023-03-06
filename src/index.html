@@ -23,7 +23,7 @@
                     onclick="location.href='index.html'">Icon</plz-button></a>
             <a href="#" class="web">Palaze web</a>
             <nav class="right">
-                <a class="right-side" href="docs.html">Docs</a>
+                <a class="right-side" href="docs.html" target="_blank">Docs</a>
                 <a class="right-side" href="#contact">Contacto</a>
                 <a class="right-side" href="#about-us">Acerca de</a>
                 <a class="right-side" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
@@ -35,20 +35,22 @@
         <section>
             <plz-hero image="../assets/icon/Hero-img.svg">
                 <div class="hero-content">
-                    <h1>Palaze web compononents</h1>
-                    <p>Elevate your website's design and functionality with our collection of native web components. Our
-                        components are lightweight, fast-loading, and easy to implement, making them the perfect
-                        solution for any website.</p>
+                    <h1>Palaze web components</h1>
+                    <p>Mejora el diseño y funcionalidad de su sitio web con nuestra colección de componentes nativos.
+                        Nuestros componentes son fáciles de implementar, livianos y proporcionan una carga rápida que
+                        los convierto en la mejor solución para cualquier sitio web.
+                    </p>
                 </div>
             </plz-hero>
         </section>
 
         <!-- sub-hero section -->
         <section class="sub-hero">
-            <h2>Get started with our components</h2>
-            <p>Start using Palaze components immediately. Click the button below to acces to complete documentation on
-                our components and how to implement them effectively.</p>
-            <button class="docs-button" onclick="location.href='docs.html'">Docs</button>
+            <h2>Empieza a usar los componentes</h2>
+            <p>Puedes empezar ahora a usar nuestros componentes Palaze. Haz click en el botón a continuación para
+                acceder a nuestra
+                documentación en la que se detalla como implementarlos en tu sitio web.</p>
+            <button class="docs-button" onclick="window.open('docs.html', '_blank')">Docs</button>
         </section>
         <div class="divider-green">
         </div>
@@ -56,39 +58,39 @@
         <!-- Cards updates section -->
         <section class="cards-section">
             <div>
-                <h2>Check out the latest added components</h2>
+                <h2>Echa un vistazo a los últimos componentes añadidos</h2>
                 <div class="landing-cards">
                     <!-- 3 card section -->
-                    <plz-card image="./assets/icon/Hero-img.svg" url="docs.html" hover="blue">
-                        <h3>Button component</h3>
-                        <p>Just the typical text of esample to know if this currently works.</p>
+                    <plz-card image="./assets/icon/card-section.png" url="docs-card.html" hover="blue" width="500">
+                        <h3>Componente tarjeta</h3>
+                        <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
                     </plz-card>
-                    <plz-card>
-                        <h3>Button component</h3>
-                        <p>Just the typical text of esample to know if this currently works.</p>
+                    <plz-card image="./assets/icon/divider-section.png" url="docs-divider.html" hover="blue" width="500">
+                        <h3>Componente Separador</h3>
+                        <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
                     </plz-card>
-                    <plz-card>
-                        <h3>Button component</h3>
-                        <p>Just the typical text of esample to know if this currently works.</p>
+                    <plz-card image="./assets/icon/hero-section.png" url="docs-hero.html" hover="blue" width="500">
+                        <h3>Componente Heroe</h3>
+                        <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
                     </plz-card>
                 </div>
             </div>
 
             <div>
-                <h2>Check out our design system</h2>
+                <h2>Consulta nuestro sistema de diseño</h2>
                 <div class="landing-cards">
                     <!-- 3 card section -->
-                    <plz-card>
-                        <h3>Button component</h3>
-                        <p>Just the typical text of esample to know if this currently works.</p>
+                    <plz-card image="./assets/icon/design-color.png" url="docs.html" hover="blue" width="500">
+                        <h3>Diseño colores</h3>
+                        <p>Se han añadido y modificado colores a nuestro sistema de diseño.</p>
                     </plz-card>
-                    <plz-card>
-                        <h3>Button component</h3>
-                        <p>Just the typical text of esample to know if this currently works.</p>
+                    <plz-card image="./assets/icon/design-corner.png" url="docs.html" hover="blue" width="500">
+                        <h3>Diseño formas</h3>
+                        <p>Añadidas nuvas formas para nuestros componentes en nuestro sistema de diseño.</p>
                     </plz-card>
-                    <plz-card>
-                        <h3>Button component</h3>
-                        <p>Just the typical text of esample to know if this currently works.</p>
+                    <plz-card image="./assets/icon/design-typography.png" url="docs.html" hover="blue" width="500">
+                        <h3>Diseño tipografía</h3>
+                        <p>Cambios en la tipografía de nuestros componentes web.</p>
                     </plz-card>
                 </div>
 
@@ -104,28 +106,29 @@
                 <div class="about-us-content">
                     <h3>Proyecto Palaze</h3>
                     <p>
-                        En Palaze, nos enorgullece ofrecer componentes web nativos de la máxima calidad, diseñados para
-                        mejorar tu experiencia de desarrollo. Nuestros componentes son intuitivos y fáciles de usar, lo
-                        que significa que puedes ahorrar tiempo y esfuerzo en la creación de aplicaciones web de aspecto
+                        En Palaze, nos enorgullece ofrecer componentes web nativos de calidad, diseñados para
+                        mejorar tu experiencia de desarrollo web. Nuestros componentes son fáciles de usar e intuitivos,
+                        permitiendo así ahorrar más tiempo y esfuerzo en la creación de tus sitios web de forma
                         profesional.
                     </p>
                     <br>
                     <p>
-                        Además, nuestros componentes son totalmente compatibles con los estándares web actuales, lo que
-                        los hace seguros y escalables para adaptarse a tus necesidades de negocio a medida que
-                        evoluciona tu
-                        proyecto. Con Palaze, puedes estar seguro de que estás invirtiendo en una solución sólida y
-                        confiable que te permitirá crear aplicaciones web atractivas y funcionales con rapidez y
-                        eficiencia.
-                        También son altamente personalizables y flexibles. Puedes modificarlos para adaptarlos a
-                        tus necesidades específicas o integrarlos con otras herramientas de tu elección. Al hacer uso de
-                        los componentes puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
+                        Además, nuestros componentes son totalmente compatibles con los estándares web actuales,
+                        haciendolos así seguros y escalables para adaptarse a tus necesidades de negocio a medida que
+                        evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una
+                        solución sólida y
+                        confiable que te permitirá crear aplicaciones web atractivas y funcionales de forma rápida y
+                        eficaz.
+                        Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para
+                        adaptarlos a
+                        tus necesidades específicas o integrarlos a las herramientas que se usen en tus proyectos.
+                        Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
                         navegador.
                     </p>
                     <br>
-                    <p>En resumen, en Palaze nos esforzamos por brindarte componentes web nativos originales y
-                        fáciles de implementar. Únete a nuestra comunidad de desarrolladores y experimenta la
-                        diferencia por ti mismo."
+                    <p>En resumen, en Palaze nos esforzamos por brindar componentes web nativos originales y con una
+                        implementación sencilla. Puedes unirte a nuestra comunidad de desarrolladores y experimentar con
+                        el desarrollo tu mismo.
                     </p>
 
                 </div>

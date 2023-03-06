@@ -18,6 +18,7 @@ export namespace Components {
         "image": string;
         "url": string;
         "variant": string;
+        "width": string;
     }
     interface PlzColors {
     }
@@ -37,6 +38,7 @@ export namespace Components {
     interface PlzMenu {
     }
     interface PlzMenuItem {
+        "type": string;
     }
     interface PlzShowcase {
     }
@@ -45,11 +47,20 @@ export namespace Components {
     }
     interface PlzShowcaseRender {
         "display": string;
+        "gap": string;
+        "height": string;
+        "paddingBottom": string;
+        "paddingLeft": string;
+        "paddingRight": string;
+        "paddingTop": string;
+        "verticalAlign": string;
     }
     interface PlzSpinner {
     }
     interface PlzTooltip {
-        "clase": string;
+        "adjust": string;
+        "position": string;
+        "variant": string;
     }
 }
 declare global {
@@ -153,6 +164,7 @@ declare namespace LocalJSX {
         "image"?: string;
         "url"?: string;
         "variant"?: string;
+        "width"?: string;
     }
     interface PlzColors {
     }
@@ -172,6 +184,7 @@ declare namespace LocalJSX {
     interface PlzMenu {
     }
     interface PlzMenuItem {
+        "type"?: string;
     }
     interface PlzShowcase {
     }
@@ -180,11 +193,20 @@ declare namespace LocalJSX {
     }
     interface PlzShowcaseRender {
         "display"?: string;
+        "gap"?: string;
+        "height"?: string;
+        "paddingBottom"?: string;
+        "paddingLeft"?: string;
+        "paddingRight"?: string;
+        "paddingTop"?: string;
+        "verticalAlign"?: string;
     }
     interface PlzSpinner {
     }
     interface PlzTooltip {
-        "clase"?: string;
+        "adjust"?: string;
+        "position"?: string;
+        "variant"?: string;
     }
     interface IntrinsicElements {
         "plz-button": PlzButton;
