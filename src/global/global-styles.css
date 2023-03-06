@@ -414,6 +414,11 @@ header a.palaze {
     list-style: none;
 }
 
+.sidebar .sub-option {
+    padding-left: 48px;
+    display: none;
+}
+
 .sidebar img {
     width: 225px;
     border-radius: var(--plz-border-radius-low-rounded);
