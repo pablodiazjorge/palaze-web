@@ -1,0 +1,66 @@
+<section class="content-detail">
+    <h1>Spinner</h1>
+    <p class="component-tag">&lt;plz-spinner&gt; &#124; PlzSpinner</p>
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
+    <!-- Pequeña descripción -->
+    <p>Los componentes de tipo spinner se utilizan principalmente para indicar que algo está cargando/procesando algún
+        tipo de información. Se suele utilizar haciendo visible el componente spinner al hacer una petición que puede
+        demorar algo de tiempo y cuando se recibe la petición con la información, se vuelve a hacer invisible el
+        componente, de esta forma se indica que algo está sucediendo en ese tiempo de espera.</p>
+    <!-- Muestra del componente -->
+    <plz-showcase>
+        <plz-showcase-render>
+            <plz-spinner></plz-spinner>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-spinner></plz-spinner>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <!-- Ejemplos de las posibilidades del componente-->
+    <h2>Ejemplos</h2>
+    <plz-divider></plz-divider>
+    <h3>Distintos tipos de spinner</h3>
+    <p>Usaremos el atributo variant para elegir la variante de spinner que consideremos entre "simple", "normal",
+        "wave",
+        "atom",
+        "bola".</p>
+    <p>Considerando la gran variedad de spinners que puedes encontrar en sitios web, se puede decir que estas son las
+        variantes más utilizadas. En cada sitio web estará desarrollado de una manera distinta, en este caso se ha
+        desarrollado intentando mantener el minimalismo, pero a la vez manteniendo su atractivo visual.</p>
+    <plz-showcase>
+        <plz-showcase-render gap="25">
+            <plz-spinner variant="simple"></plz-spinner>
+            <plz-spinner variant="normal"></plz-spinner>
+            <plz-spinner variant="wave"></plz-spinner>
+            <plz-spinner variant="atom"></plz-spinner>
+            <plz-spinner variant="bola"></plz-spinner>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-spinner variant="simple"></plz-spinner>
+            <plz-spinner variant="normal"></plz-spinner>
+            <plz-spinner variant="wave"></plz-spinner>
+            <plz-spinner variant="atom"></plz-spinner>
+            <plz-spinner variant="bola"></plz-spinner>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <!-- Sección de los atributos -->
+    <h2>Atributos</h2>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Posibilidades</th>
+                <th>Por defecto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>variant</td>
+                <td>Distintas variantes del componente spinner</td>
+                <td>'normal' - 'simple' - 'wave' - 'atom' - 'bola'</td>
+                <td>'normal'</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

@@ -56,6 +56,7 @@ export namespace Components {
         "verticalAlign": string;
     }
     interface PlzSpinner {
+        "variant": string;
     }
     interface PlzTooltip {
         "adjust": string;
@@ -202,6 +203,7 @@ declare namespace LocalJSX {
         "verticalAlign"?: string;
     }
     interface PlzSpinner {
+        "variant"?: string;
     }
     interface PlzTooltip {
         "adjust"?: string;
