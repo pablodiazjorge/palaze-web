@@ -3,7 +3,11 @@
     <p class="component-tag">&lt;plz-divider&gt; &#124; PlzDivider</p> <!-- Dar forma y poner letra de consola-->
     <plz-divider space-bottom="10" space-top="4"></plz-divider>
     <!-- Pequeña descripción -->
-    <p>Los separadores sirven para marcar distintas partes del contenido y hacer que se diferencien.</p>
+    <p>Los separadores sirven para dividir distintas partes del contenido y hacer que se diferencien.</p>
+    <p>En este caso se hará uso de separadores de tipo horizontal ya que son los más comunes y se podrá ajustar grosor,
+        color y forma del mismo.</p>
+    <p>El uso más normal de estos es de tipo minimalista, una línea fina solida de un color que vaya acorde al estilo de
+        la página y que no resalte mucho.</p>
 
     <plz-showcase>
         <plz-showcase-render display="block">
@@ -17,7 +21,9 @@
     <h2>Ejemplos</h2>
     <plz-divider></plz-divider>
     <h3>Tipos de separador</h3>
-    <p>Usaremos el atributo type para elegir el tipo de separador que veamos adecuado para nuestro contenido.</p>
+    <p>Usaremos el atributo type para elegir el tipo de separador que veamos adecuado para nuestro contenido entre
+        "solid", "dashed" y "dotted".</p>
+    <p>En este caso estaremos modificando la forma del separador, pudiendo elegir entre tres tipos.</p>
     <plz-showcase>
         <plz-showcase-render display="block">
             <plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
@@ -30,8 +36,10 @@
         </plz-showcase-code>
     </plz-showcase>
 
-    <h3>Tamaño del separador</h3>
-    <p>Usaremos el atributo height para elegir el ancho del separador.</p>
+    <h3>Grosor del separador</h3>
+    <p>Usaremos el atributo height para elegir el grosor del separador.</p>
+    <p>Pese a que lo más común es utilizar un grosor pequeño, en algunas ocasiones puede verse el caso de necesitar un
+        grosor más grande.</p>
     <plz-showcase>
         <plz-showcase-render>
             <plz-divider space-top="10" space-bottom="15" height="7" type="solid"></plz-divider>
@@ -42,8 +50,9 @@
     </plz-showcase>
 
     <h3>Color del separador</h3>
-    <p>Usaremos el atributo color para elegir el color. Por defecto será black-4 (meter un tooltip aquí).</p>
-    <p>Puedes usar tanto hex, rgb o rgba para el atributo color.</p>
+    <p>Usaremos el atributo color para elegir el color más adecuado según nuestro estilo de página web. Por defecto será
+        black-4 (meter un tooltip aquí).</p> <!-- Revisar-->
+    <p>Se puede usar tanto hex, rgb o rgba para el atributo color.</p>
     <plz-showcase>
         <plz-showcase-render display="block">
             <plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
@@ -62,6 +71,8 @@
 
     <h3>Margen superior e inferior del separador</h3>
     <p>Usaremos el atributo space-top y space-bottom para añadir espacio entre los elementos y el separador.</p>
+    <p>En algunos casos es necesario añadir un margen extra para que la colocación de nuestro elemento separador se
+        visualice correctamente con nuestro contenido.</p>
     <plz-showcase>
         <plz-showcase-render display="block">
             <p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
@@ -75,7 +86,9 @@
     </plz-showcase>
 
     <h3>Combinaciones para crear dividers originales</h3>
-    <p>Podemos usar combinaciones de los atributos vistos para crear separadores creativos.</p>
+    <p>Podemos usar combinaciones de los atributos vistos para crear separadores originales.</p>
+    <p>En ocasiones se da el caso de necesitar un separador con distintos colores para hacer el cambio de sección más
+        visual, pudiendo cambiar grosor, forma, etc. pudiendo ser así más creativo.</p>
     <plz-showcase>
         <plz-showcase-render display="block">
             <p>En este caso obtenemos un separador de distintos colores.</p>
