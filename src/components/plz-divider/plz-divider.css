@@ -2,23 +2,31 @@
   /*    ## FUENTES ##   */
   --plz-font-primary: Padauk, sans-serif;
   /* Peso fuente */
-  --plz-font-weight-light: 100;
-  --plz-font-weight-normal: 400;
-  --plz-font-weight-bold: 500;
+  --plz-font-weight-regular: 400;
+  --plz-font-weight-bold: 700;
 
   /* Tamaño fuente */
   --plz-font-size-very-small: 12px;
   --plz-font-size-small: 14px;
   --plz-font-size-normal: 16px;
   --plz-font-size-sub-section: 20px;
+  --plz-font-size-mid-section: 30px;
   --plz-font-size-section: 48px;
   --plz-font-size-titles: 64px;
   --plz-font-size-below-titles: 24px;
 
   /* Altura de linea */
-  --plz-line-height-low: 1.4;
+  --plz-line-height-smaller: 1;
+  --plz-line-height-small: 1.4;
   --plz-line-height-normal: 1.8;
   --plz-line-height-big: 2.4;
+
+  /* Espacio entre letras */
+  --plz-letter-space-smaller: -0.48px;
+  --plz-letter-space-small: -0.24px;
+  --plz-letter-space-normal: normal;
+  --plz-letter-space-big: 1.2px;
+  --plz-letter-space-biger: 2.4px;
 
   /* Radio borde */
   --plz-border-radius-circle: 50%;
@@ -49,6 +57,27 @@
   --plz-color-red-3: #e67a8d;
   --plz-color-red-4: #FFB3C1;
   --plz-color-red-5: #FFF0F3;
+
+  /* Primarios-gamma-yellow */
+  --plz-color-yellow-1: #b88900;
+  --plz-color-yellow-2: #d3a007;
+  --plz-color-yellow-3: #fbf451;
+  --plz-color-yellow-4: #ffff7d;
+  --plz-color-yellow-5: #ffffdb;
+
+  /* Primarios-gamma-purple */
+  --plz-color-purple-1: #340856;
+  --plz-color-purple-2: #5d1372;
+  --plz-color-purple-3: #732487;
+  --plz-color-purple-4: #a167c9;
+  --plz-color-purple-5: #fff0ff;
+
+  /* Primarios-gamma-orange */
+  --plz-color-orange-1: #ee4a00;
+  --plz-color-orange-2: #e28000;
+  --plz-color-orange-3: #f9a72f;
+  --plz-color-orange-4: #fbbd5e;
+  --plz-color-orange-5: #fde9b0;
 
   /* Primarios-gamma-negro */
   --plz-color-black-1: black;
