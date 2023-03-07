@@ -28,6 +28,7 @@
             });
         });
     });
+
     var designActive = false;
     var toggled = false;
     let sideWidth = 0;
@@ -58,21 +59,6 @@
         xhr.send();
     }
 
-    function displayDesign() {
-        if (designActive === false) {
-            designActive = true;
-            document.getElementById("design1").style.display = "block";
-            document.getElementById("design2").style.display = "block";
-            document.getElementById("design3").style.display = "block";
-
-        } else if (designActive == true) {
-            designActive = false;
-            document.getElementById("design1").style.display = "none";
-            document.getElementById("design2").style.display = "none";
-            document.getElementById("design3").style.display = "none";
-        }
-    }
-
 </script>
 
 <body>
@@ -92,10 +78,10 @@
             <li onclick="loadSection('docs-tooltip.html')">Tooltip</li>
             <li onclick="loadSection('docs-spinner.html')">Spinner</li>
             <plz-divider></plz-divider>
-            <li onclick="loadSection('docs-design-system.html'), displayDesign()">Design System</li>
-            <li id="design1" class="sub-option" onclick="location.href='#cargaesto'">Typography</li>
-            <li id="design2" class="sub-option" onclick="location.href='#cargaesto'">Colors</li>
-            <li id="design3" class="sub-option" onclick="location.href='#cargaesto'">Corners</li>
+            <li onclick="loadSection('docs-design-system.html')">Design System</li>
+            <li class="sub-option">Colores</li>
+            <li class="sub-option">Tipografía</li>
+            <li class="sub-option">Formas</li>
         </ul>
     </nav>
 

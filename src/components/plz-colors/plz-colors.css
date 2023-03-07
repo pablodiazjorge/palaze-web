@@ -1,9 +1,37 @@
 :host {
   display: block;
 
-  /*    ## COLORES ##   */
-  /* Primarios-gamma-azul */
+  /*    ## FUENTES ##   */
+  --plz-font-primary: Padauk, sans-serif;
+  /* Peso fuente */
+  --plz-font-weight-light: 100;
+  --plz-font-weight-normal: 400;
+  --plz-font-weight-bold: 500;
 
+  /* Tamaño fuente */
+  --plz-font-size-very-small: 12px;
+  --plz-font-size-small: 14px;
+  --plz-font-size-normal: 16px;
+  --plz-font-size-sub-section: 20px;
+  --plz-font-size-section: 48px;
+  --plz-font-size-titles: 64px;
+  --plz-font-size-below-titles: 24px;
+
+  /* Altura de linea */
+  --plz-line-height-low: 1.4;
+  --plz-line-height-normal: 1.8;
+  --plz-line-height-big: 2.4;
+
+  /* Radio borde */
+  --plz-border-radius-circle: 50%;
+  --plz-border-radius-rounded: 9999px;
+  --plz-border-radius-low-rounded: 25px;
+  --plz-border-radius-default: 0.25rem;
+  --plz-border-radius-square: 0px;
+
+  /*    ## COLORES ##   */
+
+  /* Primarios-gamma-azul */
   --plz-color-blue-1: #023E8A;
   --plz-color-blue-2: #0077B6;
   --plz-color-blue-3: #0096C7;
@@ -11,7 +39,6 @@
   --plz-color-blue-5: #CAF0F8;
 
   /* Primarios-gamma-verde */
-
   --plz-color-green-1: #081C15;
   --plz-color-green-2: #1B4332;
   --plz-color-green-3: #4cb05b;
@@ -25,6 +52,27 @@
   --plz-color-red-4: #FFB3C1;
   --plz-color-red-5: #FFF0F3;
 
+  /* Primarios-gamma-yellow */
+  --plz-color-yellow-1: #b88900;
+  --plz-color-yellow-2: #d3a007;
+  --plz-color-yellow-3: #fbf451;
+  --plz-color-yellow-4: #ffff7d;
+  --plz-color-yellow-5: #ffffdb;
+
+/* Primarios-gamma-purple */
+  --plz-color-purple-1: #340856;
+  --plz-color-purple-2: #5d1372;
+  --plz-color-purple-3: #732487;
+  --plz-color-purple-4: #a167c9;
+  --plz-color-purple-5: #fff0ff;
+
+/* Primarios-gamma-orange */
+  --plz-color-orange-1: #ee4a00;
+  --plz-color-orange-2: #e28000;
+  --plz-color-orange-3: #f9a72f;
+  --plz-color-orange-4: #fbbd5e;
+  --plz-color-orange-5: #fde9b0;
+
   /* Primarios-gamma-negro */
   --plz-color-black-1: black;
   --plz-color-black-2: #212529;
@@ -34,25 +82,34 @@
 
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
+
+  border-radius: var(--plz-border-radius-rounded);
 }
 
-div {
-  height: 50px;
-  width: 100%;
+.container {
+  border-radius: var(--plz-border-radius-rounded);
+}
+
+.color {
+  box-sizing: border-box;
+  height: 40px;
+  width: 300px;
+  min-width: 230px;
   text-align: center;
 }
 
 p {
   margin: 0;
   padding: 0;
-  font-size: 1.75rem;
   position: relative;
-  font-weight: 100;
+  font-size: var(--plz-font-size-sub-section);
   top: 50%;
   transform: translateY(-50%);
 }
 
 .blue1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
   background-color: var(--plz-color-blue-1);
   color: white;
 }
@@ -75,9 +132,13 @@ p {
 .blue5 {
   background-color: var(--plz-color-blue-5);
   color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
 }
 
 .green1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
   background-color: var(--plz-color-green-1);
   color: white;
 }
@@ -100,9 +161,13 @@ p {
 .green5 {
   background-color: var(--plz-color-green-5);
   color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
 }
 
 .red1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
   background-color: var(--plz-color-red-1);
   color: white;
 }
@@ -125,9 +190,13 @@ p {
 .red5 {
   background-color: var(--plz-color-red-5);
   color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
 }
 
 .black1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
   background-color: var(--plz-color-black-1);
   color: white;
 }
@@ -150,4 +219,93 @@ p {
 .black5 {
   background-color: var(--plz-color-black-5);
   color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
+}
+
+.orange1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
+  background-color: var(--plz-color-orange-1);
+  color: white;
+}
+
+.orange2 {
+  background-color: var(--plz-color-orange-2);
+  color: white;
+}
+
+.orange3 {
+  background-color: var(--plz-color-orange-3);
+  color: white;
+}
+
+.orange4 {
+  background-color: var(--plz-color-orange-4);
+  color: black;
+}
+
+.orange5 {
+  background-color: var(--plz-color-orange-5);
+  color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
+}
+
+.purple1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
+  background-color: var(--plz-color-purple-1);
+  color: white;
+}
+
+.purple2 {
+  background-color: var(--plz-color-purple-2);
+  color: white;
+}
+
+.purple3 {
+  background-color: var(--plz-color-purple-3);
+  color: white;
+}
+
+.purple4 {
+  background-color: var(--plz-color-purple-4);
+  color: black;
+}
+
+.purple5 {
+  background-color: var(--plz-color-purple-5);
+  color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
+}
+
+.yellow1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
+  background-color: var(--plz-color-yellow-1);
+  color: white;
+}
+
+.yellow2 {
+  background-color: var(--plz-color-yellow-2);
+  color: white;
+}
+
+.yellow3 {
+  background-color: var(--plz-color-yellow-3);
+  color: black;
+}
+
+.yellow4 {
+  background-color: var(--plz-color-yellow-4);
+  color: black;
+}
+
+.yellow5 {
+  background-color: var(--plz-color-yellow-5);
+  color: black;
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
 }

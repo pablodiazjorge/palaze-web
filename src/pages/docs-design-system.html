@@ -1,66 +1,247 @@
 <section class="content-detail">
-    <h1>Spinner</h1>
-    <p class="component-tag">&lt;plz-spinner&gt; &#124; PlzSpinner</p>
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
+    <h1>Sistema de diseño</h1>
+    <plz-divider space-top="-15" height="1.5" type="solid" color="#A4133C"></plz-divider>
+    <plz-divider height="1.5" type="solid" color="#FF4D6D"></plz-divider>
+    <plz-divider height="1.5" type="solid" color="#e67a8d"></plz-divider>
+    <plz-divider height="1.5" type="solid" color="#FFB3C1"></plz-divider>
+    <plz-divider space-bottom="15" height="1.5" type="solid" color="#FFF0F3"></plz-divider>
     <!-- Pequeña descripción -->
-    <p>Los componentes de tipo spinner se utilizan principalmente para indicar que algo está cargando/procesando algún
-        tipo de información. Se suele utilizar haciendo visible el componente spinner al hacer una petición que puede
-        demorar algo de tiempo y cuando se recibe la petición con la información, se vuelve a hacer invisible el
-        componente, de esta forma se indica que algo está sucediendo en ese tiempo de espera.</p>
-    <!-- Muestra del componente -->
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-spinner></plz-spinner>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-spinner></plz-spinner>'>
-        </plz-showcase-code>
-    </plz-showcase>
+    <p>Dentro del desarroyo web los sistemas de diseño han supuesto un antes y un después. Se han hecho indispensables a
+        la hora de mantener la consistencia y eficiencia a lo largo del desarrollo de los proyectos. Debido a este
+        motivo se decidió crear un sistema de diseño que apoyara el proyecto Palaze.</p>
+    <h3>¿Qué es un sistema de diseño?</h3>
+    <p>Un sistema de diseño es un conjunto de directrices y reglas que se utilizarán en el proceso de creación de los
+        componentes y de todos los elementos del proyecto al que acompañe. Estas reglas pueden ser tipografía, paletas
+        de colores, formas de componentes, el cómo interactúa el usuario final con los elementos del sitio web, etc.
+    </p>
+    <p>Principalmente, los sistemas de diseño nacieron de la falta de consistencia en los proyectos web, ya que lo que
+        sucedía era que en un mismo proyecto, se iban modificando estilos aplicados a los mismos componentes debido a no
+        tener guías. Este hecho en proyectos de cierto tamaño se hacía aún más visible, por esta razón, se decidió crear
+        sistemas de diseño para mantener la consistencia y coherencia dentro de un proyecto, pudiendo así los
+        desarrolladores disfrutar de un camino menos escarpado durante su estancia en estos.</p>
+    <h3>¿Qué son los tokens de diseño?</h3>
+    <p>Los tokens de diseño son variables que representan las guías y directrices que se utilizan en los sistemas de
+        diseño. Un ejemplo de estas variables de diseño son los colores dentro de las paletas seleccionadas en el
+        sistema de diseño, otro sería el tipo de letra y los tamaños correspondientes dependiendo de dónde se use, ya
+        sea un título o subtítulo, etc.</p>
+    <p>En este caso las variables serán representadas por css properties.</p>
 
-    <!-- Ejemplos de las posibilidades del componente-->
-    <h2>Ejemplos</h2>
-    <plz-divider></plz-divider>
-    <h3>Distintos tipos de spinner</h3>
-    <p>Usaremos el atributo variant para elegir la variante de spinner que consideremos entre "simple", "normal",
-        "wave",
-        "atom",
-        "bola".</p>
-    <p>Considerando la gran variedad de spinners que puedes encontrar en sitios web, se puede decir que estas son las
-        variantes más utilizadas. En cada sitio web estará desarrollado de una manera distinta, en este caso se ha
-        desarrollado intentando mantener el minimalismo, pero a la vez manteniendo su atractivo visual.</p>
-    <plz-showcase>
-        <plz-showcase-render gap="25">
-            <plz-spinner variant="simple"></plz-spinner>
-            <plz-spinner variant="normal"></plz-spinner>
-            <plz-spinner variant="wave"></plz-spinner>
-            <plz-spinner variant="atom"></plz-spinner>
-            <plz-spinner variant="bola"></plz-spinner>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-spinner variant="simple"></plz-spinner>
-            <plz-spinner variant="normal"></plz-spinner>
-            <plz-spinner variant="wave"></plz-spinner>
-            <plz-spinner variant="atom"></plz-spinner>
-            <plz-spinner variant="bola"></plz-spinner>'>
-        </plz-showcase-code>
-    </plz-showcase>
+    <h3>Ventajas de utilizar un sistema de diseño</h3>
+    <p>Coherencia: Gracias a compartir los mismos patrones durante todo el proyecto, se reduce la posibilidad de que en
+        mismos componentes en distintas secciones varien en estilo.</p>
+    <p>Reutilización: Este apartado es clave, los sistemas de diseño se suelen utilizar en varios proyectos o una vez
+        acabado con uno, hacer unas pequeñas modificaciones y usarlo en otro. También se reutilizan los tokens de diseño
+        constantemente sobre un mismo proyecto para mantener la cohesión.</p>
+    <p>Flexibilidad: Permite una amplia libertad al poderse usar en cualquier plataforma o tecnología. Al ser unos
+        patrones/reglas/directrices, se pueden aplicar sobre casi cualquier proyecto.</p>
+    <p>Eficiencia y calidad: Se ahorra mucho tiempo debido a no tener que ir revisando cómo se han aplicado los estilos
+        en otras secciones. Simplemente tienes que mirar los tokens de diseño y aplicarlos. Otro punto fuerte de esto es
+        que si se hace una modificación en los tokens de diseño, se aplican en todos los elementos en que se usen, lo
+        que permite mejorar la calidad y la eficiencia de los productos reduciendo así el número de fallos.</p>
+    <p>Entre muchas otras ventajas.</p>
 
-    <!-- Sección de los atributos -->
-    <h2 id="cargaesto">Atributos</h2>
+    <plz-divider height="1.5" type="solid" color="#ee4a00"></plz-divider>
+    <plz-divider height="1.5" type="solid" color="#e28000"></plz-divider>
+    <plz-divider height="1.5" type="solid" color="#f9a72f"></plz-divider>
+    <plz-divider height="1.5" type="solid" color="#fbbd5e"></plz-divider>
+    <plz-divider space-bottom="15" height="1.5" type="solid" color="#fde9b0"></plz-divider>
+    <h2>Sistema de diseño Palaze</h2>
+    <p>El sistema de diseño empleado en Palaze destaca por buscar el minimalismo, no se pretende saturar al usuario con
+        elementos excesivamente llamativos que distraigan el foco de lo verdaderamente importante.</p>
+    <h3>Paletas de colores</h3>
+    <p>Las paletas de colores que se muestran a continuación son las que se usan en Palaze, tokens incluidos.</p>
+
+    <div class="colors-design">
+        <plz-colors class="paleta" variant="green"></plz-colors>
+        <plz-colors class="paleta" variant="blue"></plz-colors>
+        <plz-colors class="paleta" variant="red"></plz-colors>
+        <plz-colors class="paleta" variant="yellow"></plz-colors>
+        <plz-colors class="paleta" variant="purple"></plz-colors>
+        <plz-colors class="paleta" variant="orange"></plz-colors>
+        <plz-colors class="paleta" variant="black"></plz-colors>
+    </div>
+
+    <h3>Tipografía</h3>
+    <p>A continuación se muestra un ejemplo de los distintos tipos de letra, tamaño, espacio entre lineas, espacio entre
+        letras, etc.</p>
+    <h4>Familia Tipográfica</h4>
     <table class="table-atr">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
+                <th style="background-color: #FF4D6D; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                    Token</th>
+                <th style="background-color: #e67a8d;">Valor</th>
+                <th
+                    style="background-color: #FFB3C1; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                    Ejemplo</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>variant</td>
-                <td>Distintas variantes del componente spinner</td>
-                <td>'normal' - 'simple' - 'wave' - 'atom' - 'bola'</td>
-                <td>'normal'</td>
+                <td>--plz-font-primary</td>
+                <td>Padauk</td>
+                <td style="font-family: Padauk, sans-serif;">La octaba maravilla del mundo.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>sans-serif</td>
+                <td style="font-family: sans-serif, Padauk;">La octaba maravilla del mundo.</td>
             </tr>
         </tbody>
     </table>
+
+    <h4>Tamaño de fuente</h4>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th style="background-color: #f9a72f; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                    Token</th>
+                <th style="background-color: #fbbd5e;">Valor</th>
+                <th
+                    style="background-color: #fde9b0; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                    Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>--plz-font-size-very-small</td>
+                <td>12px</td>
+                <td style="font-size: 12px;">Aa</td>
+            </tr>
+            <tr>
+                <td>--plz-font-size-small</td>
+                <td>14px</td>
+                <td style="font-size: 14px;">Aa</td>
+            </tr>
+            <tr>
+                <td>--plz-font-size-normal</td>
+                <td>16px</td>
+                <td style="font-size: 16px;">Aa</td>
+            </tr>
+            <tr>
+                <td>--plz-font-size-sub-section</td>
+                <td>20px</td>
+                <td style="font-size: 20px;">Aa</td>
+            </tr>
+            <tr>
+                <td>--plz-font-size-below-titles</td>
+                <td>24px</td>
+                <td style="font-size: 24px;">Aa</td>
+            </tr>
+            <tr>
+                <td>--plz-font-size-section</td>
+                <td>48px</td>
+                <td style="font-size: 48px;">Aa</td>
+            </tr>
+            <tr>
+                <td>--plz-font-size-titles</td>
+                <td>64px</td>
+                <td style="font-size: 64px;">Aa</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Grosor de fuente</h4>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th style="background-color: #4cb05b; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                    Token</th>
+                <th style="background-color: #52B788;">Valor</th>
+                <th
+                    style="background-color: #D8F3DC; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                    Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>--plz-font-weight-light</td>
+                <td>100</td>
+                <td style="font-weight: 100;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-normal</td>
+                <td>200</td>
+                <td style="font-weight: 200;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-bold</td>
+                <td>300</td>
+                <td style="font-weight: 300;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-light</td>
+                <td>400</td>
+                <td style="font-weight: 400;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-normal</td>
+                <td>500</td>
+                <td style="font-weight: 500;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-bold</td>
+                <td>600</td>
+                <td style="font-weight: 600;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-light</td>
+                <td>700</td>
+                <td style="font-weight: 700;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-normal</td>
+                <td>800</td>
+                <td style="font-weight: 800;">Visteme despacio que tengo prisa.</td>
+            </tr>
+            <tr>
+                <td>--plz-font-weight-bold</td>
+                <td>900</td>
+                <td style="font-weight: 900;">Visteme despacio que tengo prisa.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Espacio entre lineas</h4>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th style="background-color: #0096C7; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                    Token</th>
+                <th style="background-color: #a7b3e9;">Valor</th>
+                <th
+                    style="background-color: #CAF0F8; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                    Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>type</td>
+                <td>Distintas tipos del componente separador</td>
+                <td>'solid' - 'dashed' - 'dotted'</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Espacio entre letras</h4>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th style="background-color: #b88900; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                    Token</th>
+                <th style="background-color: #d3a007;">Valor</th>
+                <th
+                    style="background-color: #fbf451; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                    Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>type</td>
+                <td>Distintas tipos del componente separador</td>
+                <td>'solid' - 'dashed' - 'dotted'</td>
+            </tr>
+        </tbody>
+    </table>
+
 </section>
