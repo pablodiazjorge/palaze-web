@@ -7,13 +7,16 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `color`   | `color`   |             | `string` | `'default'` |
-| `corners` | `corners` |             | `string` | `'default'` |
-| `icon`    | `icon`    |             | `string` | `''`        |
-| `size`    | `size`    |             | `string` | `'default'` |
-| `variant` | `variant` |             | `string` | `'default'` |
+| Property      | Attribute      | Description | Type      | Default     |
+| ------------- | -------------- | ----------- | --------- | ----------- |
+| `active`      | `active`       |             | `boolean` | `false`     |
+| `color`       | `color`        |             | `string`  | `'default'` |
+| `corners`     | `corners`      |             | `string`  | `'default'` |
+| `icon`        | `icon`         |             | `string`  | `''`        |
+| `shadowColor` | `shadow-color` |             | `string`  | `''`        |
+| `size`        | `size`         |             | `string`  | `'default'` |
+| `text`        | `text`         |             | `string`  | `''`        |
+| `variant`     | `variant`      |             | `string`  | `'default'` |
 
 
 ----------------------------------------------
