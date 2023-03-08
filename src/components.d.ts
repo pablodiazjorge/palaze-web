@@ -7,11 +7,13 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlzButton {
+        "active": boolean;
         "color"?: string;
         "corners"?: string;
         "icon"?: string;
         "shadowColor"?: string;
         "size"?: string;
+        "text": string;
         "variant"?: string;
     }
     interface PlzCard {
@@ -156,11 +158,13 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PlzButton {
+        "active"?: boolean;
         "color"?: string;
         "corners"?: string;
         "icon"?: string;
         "shadowColor"?: string;
         "size"?: string;
+        "text"?: string;
         "variant"?: string;
     }
     interface PlzCard {

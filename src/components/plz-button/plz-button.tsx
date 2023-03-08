@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop, Element, State } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'plz-button',
@@ -12,25 +12,8 @@ export class PlzButton {
   @Prop() corners?: string = 'default';
   @Prop() shadowColor?: string = '';
   @Prop() icon?: string = '';
-  @State() activo: boolean = false;
-
-  @Element() el: HTMLElement;
-
-  /**
-   * Method to control when user click in the button type progress
-   */
-  handleClick() {
-    const button = this.el.shadowRoot.querySelector('.progress') as HTMLButtonElement;
-    const content = this.el.innerHTML;
-    console.log(this.el.innerHTML);
-    
-    const contentNew =
-      "<div class='playa active-load'><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div></div>";
-      button.innerHTML = contentNew;
-    setTimeout(() => {
-      button.innerHTML = content;
-    }, 2000);
-  }
+  @Prop() active: boolean = false;
+  @Prop() text: string = '';
 
   render() {
     return this.variant == 'default' ? (
@@ -51,11 +34,19 @@ export class PlzButton {
           <img class={this.variant + '-' + this.size + '-size'} src={'./assets/icon/Icon-' + `${this.icon}` + '.svg'} alt={`${this.icon}`} />
         </button>
       </Host>
-    ) : this.variant == 'progress' ? (
+    ) : this.variant == 'progress' && this.active == true ? (
       <Host>
-        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor} onClick={() => this.handleClick()}>
-          <slot></slot>
-        </button>
+        <button
+          class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}
+          innerHTML="<div class='playa'><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div></div>"
+        ></button>
+      </Host>
+    ) : this.variant == 'progress' && this.active == false ? (
+      <Host>
+        <button
+          class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}
+          innerHTML={this.text}
+        ></button>
       </Host>
     ) : null;
   }

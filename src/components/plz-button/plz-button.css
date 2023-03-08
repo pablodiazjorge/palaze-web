@@ -166,20 +166,11 @@ img {
   transform: scale(1.05);
 }
 
-/* ## SPINNER ## */
-
-/* ## WAVE ## */
-
-.active-load {
-  display: flex;
-}
-
-.no-active-load {
-  display: none;
-}
+/* ## PROGRESS VARIANT ## */
 
 .playa {
   box-sizing: border-box;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
@@ -188,8 +179,9 @@ img {
 .wave {
   margin: 2px;
   width: 4px;
-  height: 12px;
+  height: 16px;
   background: linear-gradient(80deg, var(--plz-color-blue-1), var(--plz-color-blue-4));
+  mix-blend-mode: color-dodge; /* luminosity y color-dodge se distinguen bien*/
   animation: wave 1.5s linear infinite;
 }
 
