@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop, Element } from '@stencil/core';
+import { Component, h, Host, Prop, Element, State } from '@stencil/core';
 
 @Component({
   tag: 'plz-button',
@@ -10,29 +10,38 @@ export class PlzButton {
   @Prop() size?: string = 'default';
   @Prop() color?: string = 'default';
   @Prop() corners?: string = 'default';
+  @Prop() shadowColor?: string = '';
   @Prop() icon?: string = '';
+  @State() activo: boolean = false;
 
   @Element() el: HTMLElement;
-
 
   /**
    * Method to control when user click in the button type progress
    */
   handleClick() {
     const button = this.el.shadowRoot.querySelector('.progress') as HTMLButtonElement;
-    const element = this.el.shadowRoot.querySelector('.spinner') as HTMLElement;
-    button.disabled = true;
-    element.style.display = 'block';
+    const content = this.el.innerHTML;
+    console.log(this.el.innerHTML);
+    
+    const contentNew =
+      "<div class='playa active-load'><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div></div>";
+      button.innerHTML = contentNew;
     setTimeout(() => {
-      element.style.display = 'none';
-      button.disabled = false;
+      button.innerHTML = content;
     }, 2000);
   }
 
   render() {
     return this.variant == 'default' ? (
       <Host>
-        <button class={this.variant + ' ' + this.color + '-color ' + this.size + '-size ' + this.corners + '-border'}>
+        <button class={this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}>
+          <slot></slot>
+        </button>
+      </Host>
+    ) : this.variant == 'pop-shadow' ? (
+      <Host>
+        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}>
           <slot></slot>
         </button>
       </Host>
@@ -44,10 +53,7 @@ export class PlzButton {
       </Host>
     ) : this.variant == 'progress' ? (
       <Host>
-        <button class={this.variant + ' ' + this.color + '-color ' + this.size + '-size ' + this.corners + '-border'} onClick={() => this.handleClick()}>
-          <div class="spinner">
-            <div class="spin"></div>
-          </div>
+        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor} onClick={() => this.handleClick()}>
           <slot></slot>
         </button>
       </Host>

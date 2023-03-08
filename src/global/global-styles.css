@@ -102,6 +102,10 @@ img {
     padding: 0;
 }
 
+body {
+    font-family: var(--plz-font-primary);
+}
+
 /*
     ###      LANDING-PAGE      ###
 */
@@ -564,13 +568,14 @@ header a.palaze {
 .content-detail h3 {
     font-size: var(--plz-font-size-mid-section);
     margin-block-start: var(--plz-font-size-sub-section);
-    margin-block-end: 10px;
+    margin-block-end: 0px;
+    letter-spacing: var(--plz-letter-space-small);
 }
 
 .content-detail h4 {
     font-size: var(--plz-font-size-below-titles);
     margin-block-start: var(--plz-font-size-sub-section);
-    margin-block-end: 10px;
+    margin-block-end: 0px;
     line-height: var(--plz-line-height-normal);
 }
 

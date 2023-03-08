@@ -23,7 +23,7 @@ export class PlzShowcaseRender {
           style={{
             height: `${this.height}px`,
             paddingTop: `${this.paddingTop}px`,
-            padding: `${this.paddingBottom}px`,
+            paddingBottom: `${this.paddingBottom}px`,
             paddingLeft: `${this.paddingLeft}px`,
             paddingRight: `${this.paddingRight}px`,
             alignItems: `${this.verticalAlign}`,

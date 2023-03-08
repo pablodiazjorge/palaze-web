@@ -10,6 +10,7 @@ export namespace Components {
         "color"?: string;
         "corners"?: string;
         "icon"?: string;
+        "shadowColor"?: string;
         "size"?: string;
         "variant"?: string;
     }
@@ -158,6 +159,7 @@ declare namespace LocalJSX {
         "color"?: string;
         "corners"?: string;
         "icon"?: string;
+        "shadowColor"?: string;
         "size"?: string;
         "variant"?: string;
     }

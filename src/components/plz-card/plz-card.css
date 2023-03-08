@@ -178,6 +178,7 @@
 .header-top {
   padding-top: 5px;
   padding-bottom: 5px;
+  overflow: hidden;
   border-top-right-radius: var(--plz-border-radius-default);
   border-top-left-radius: var(--plz-border-radius-default);
 }
@@ -216,6 +217,7 @@
 .footer-bottom {
   padding-top: 5px;
   padding-bottom: 5px;
+  overflow: hidden;
   border-bottom-right-radius: var(--plz-border-radius-default);
   border-bottom-left-radius: var(--plz-border-radius-default);
   border-bottom: 1px solid var(--plz-color-black-4);

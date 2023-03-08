@@ -91,7 +91,7 @@
 }
 
 :host([variant=icon]) {
-  display: inline-flex;
+  display: inline-block;
   height: 50px;
   width: 50px;
 }
@@ -107,20 +107,16 @@
 }
 
 :host([variant=default]) {
-  display: inline-flex;
+  display: inline-block;
 }
 
 button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* VARIANTS */
-
-.default {
-  padding: 2px 8px;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 20px;
   cursor: pointer;
+  border: none;
+  user-select: none;
 }
 
 .icon {
@@ -160,49 +156,130 @@ img {
   cursor: pointer;
 }
 
+/* ## SHADOW-POP-VARIANT ## */
 
-/* .ghost {
-  padding: 2px 8px;
-  background-color: transparent;
+.pop-shadow {
+  transition: all 150ms;
 }
 
-.ghost:hover {
-  cursor: pointer;
-} */
-
-.progress {
-  padding: 2px 8px;
-  cursor: pointer;
+.pop-shadow:hover {
+  transform: scale(1.05);
 }
 
-.spinner {
+/* ## SPINNER ## */
+
+/* ## WAVE ## */
+
+.active-load {
+  display: flex;
+}
+
+.no-active-load {
   display: none;
-  border: 10px solid var(--plz-color-blue-5);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
 }
 
-.spin {
-  border-left: 5px solid var(--plz-color-blue-1);
-  width: 15px;
-  height: 15px;
-  border-radius: var(--plz-border-radius-circle);
-  animation: girar 1.5s ease-in-out infinite;
+.playa {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
 }
 
-@keyframes girar {
+.wave {
+  margin: 2px;
+  width: 4px;
+  height: 12px;
+  background: linear-gradient(80deg, var(--plz-color-blue-1), var(--plz-color-blue-4));
+  animation: wave 1.5s linear infinite;
+}
+
+.wave:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
   0% {
-    transform: rotate(0deg);
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: scale(0);
   }
 }
 
+/* ## SHADOW COLORS ## */
 
-/* SIZE */
+.pop-shadow-blue {
+  border: 1px solid var(--plz-color-blue-2);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(2, 62, 138, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(2, 62, 138, 1);
+  box-shadow: 5px 5px 15px -5px rgba(2, 62, 138, 1);
+}
+
+.pop-shadow-red {
+  border: 1px solid var(--plz-color-red-2);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(164, 19, 60, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(164, 19, 60, 1);
+  box-shadow: 5px 5px 15px -5px rgba(164, 19, 60, 1);
+}
+
+.pop-shadow-green {
+  border: 1px solid var(--plz-color-green-3);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(27, 67, 50, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(27, 67, 50, 1);
+  box-shadow: 5px 5px 15px -5px rgba(27, 67, 50, 1);
+}
+
+.pop-shadow-purple {
+  border: 1px solid var(--plz-color-purple-3);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(52, 8, 86, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(52, 8, 86, 1);
+  box-shadow: 5px 5px 15px -5px rgba(52, 8, 86, 1);
+}
+
+.pop-shadow-orange {
+  border: 1px solid var(--plz-color-orange-2);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(238, 74, 0, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(238, 74, 0, 1);
+  box-shadow: 5px 5px 15px -5px rgba(238, 74, 0, 1);
+}
+
+.pop-shadow-yellow {
+  border: 1px solid var(--plz-color-yellow-3);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(184, 137, 0, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(184, 137, 0, 1);
+  box-shadow: 5px 5px 15px -5px rgba(184, 137, 0, 1);
+}
+
+.pop-shadow-black {
+  border: 1px solid var(--plz-color-black-2);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(33, 37, 41, 1);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(33, 37, 41, 1);
+  box-shadow: 5px 5px 15px -5px rgba(33, 37, 41, 1);
+}
+
+
+/* ## SIZE ## */
 
 .default-size {
   font-size: var(--plz-font-size-normal);
@@ -222,7 +299,7 @@ img {
   line-height: var(--plz-line-height-normal);
 }
 
-/* BORDER */
+/* ## BORDER ## */
 
 .default-border {
   border-radius: var(--plz-border-radius-default);
@@ -244,92 +321,39 @@ img {
   border-radius: var(--plz-border-radius-circle);
 }
 
-/* COLOR */
+/* ## COLORS ## */
 
-.default-color {
-  background-color: var(--plz-color-white);
-  color: var(--plz-color-black-1);
-  border: 1px solid var(--plz-color-black-4);
-}
-
-.default-color:hover {
-  background-color: var(--plz-color-blue-5);
-  color: var(--plz-color-blue-1);
-}
-
-.blue-color {
-  background-color: var(--plz-color-blue-3);
-  color: var(--plz-color-white);
-  border: 1px solid var(--plz-color-blue-3);
-}
-
-.blue-color:hover {
-  background-color: var(--plz-color-blue-4);
+.blue {
+  background-color: var(--plz-color-blue-2);
   color: var(--plz-color-white);
 }
 
-.green-color {
-  background-color: var(--plz-color-green-3);
-  color: var(--plz-color-white);
-  border: 1px solid var(--plz-color-green-3);
-}
-
-.green-color:hover {
-  background-color: var(--plz-color-green-4);
-  color: var(--plz-color-white);
-}
-
-.red-color {
+.red {
   background-color: var(--plz-color-red-2);
   color: var(--plz-color-white);
-  border: 1px solid var(--plz-color-red-2);
 }
 
-.red-color:hover {
-  background-color: var(--plz-color-red-3);
+.green {
+  background-color: var(--plz-color-green-3);
   color: var(--plz-color-white);
 }
 
-.default-transparent-color {
-  background-color: transparent;
-  color: inherit;
-  border: 1px solid var(--plz-color-black-4);
-}
-
-.default-transparent-color:hover {
-  background-color: var(--plz-color-blue-5);
-  color: var(--plz-color-blue-1);
-}
-
-.blue-transparent-color {
-  background-color: transparent;
-  color: inherit;
-  border: 1px solid var(--plz-color-blue-3);
-}
-
-.blue-transparent-color:hover {
-  background-color: var(--plz-color-blue-4);
+.purple {
+  background-color: var(--plz-color-purple-3);
   color: var(--plz-color-white);
 }
 
-.green-transparent-color {
-  background-color: transparent;
-  color: inherit;
-  border: 1px solid var(--plz-color-green-3);
-}
-
-.green-transparent-color:hover {
-  background-color: transparent;
+.orange {
+  background-color: var(--plz-color-orange-2);
   color: var(--plz-color-white);
 }
 
-.red-transparent-color {
-  background-color: transparent;
-  color: inherit;
-  border: 1px solid var(--plz-color-red-2);
+.yellow {
+  background-color: var(--plz-color-yellow-3);
+  color: var(--plz-color-black-1);
 }
 
-.red-transparent-color:hover {
-  background-color: var(--plz-color-red-3);
+.black {
+  background-color: var(--plz-color-black-2);
   color: var(--plz-color-white);
 }
