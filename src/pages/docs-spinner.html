@@ -43,6 +43,26 @@
         </plz-showcase-code>
     </plz-showcase>
 
+    <h3>Distintos colores de spinner</h3>
+    <p>Usaremos el atributo color-primary, color-secundary o colors-bola dependiendo del spinner que utilicemos.</p>
+    <p>No hay limitación en cuanto a la elección de colores del spinner, podrás pasar el color mediente los tipos hex,
+        rgb o rgba. A continuación un ejemplo de cada tipo de spinner.</p>
+    <plz-showcase>
+        <plz-showcase-render gap="25">
+            <plz-spinner variant="simple" color-primary="#4cb05b" color-secondary="#1B4332"></plz-spinner>
+            <plz-spinner variant="normal" color-primary="#340856" color-secondary="#a167c9"></plz-spinner>
+            <plz-spinner variant="wave" color-primary="#A4133C" color-secondary="#FFB3C1"></plz-spinner>
+            <plz-spinner variant="atom" color-primary="#b88900"></plz-spinner>
+            <plz-spinner variant="bola" colors-bola="#023E8A,#1B4332,#4cb05b,#d3a007,#732487,#ee4a00"></plz-spinner>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-spinner variant="simple" color-primary="#4cb05b" color-secondary="#1B4332"></plz-spinner>
+            <plz-spinner variant="normal" color-primary="#340856" color-secondary="#a167c9"></plz-spinner>
+            <plz-spinner variant="wave" color-primary="#A4133C" color-secondary="#FFB3C1"></plz-spinner>
+            <plz-spinner variant="atom" color-primary="#b88900"></plz-spinner>
+            <plz-spinner variant="bola" colors-bola="#023E8A,#1B4332,#4cb05b,#d3a007,#732487,#ee4a00"></plz-spinner>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
     <!-- Sección de los atributos -->
     <h2>Atributos</h2>
     <table class="table-atr">
@@ -57,9 +77,29 @@
         <tbody>
             <tr>
                 <td>variant</td>
-                <td>Distintas variantes del componente spinner</td>
+                <td>Distintas variantes del componente spinner.</td>
                 <td>'normal' - 'simple' - 'wave' - 'atom' - 'bola'</td>
                 <td>'normal'</td>
+            </tr>
+            <tr>
+                <td>color-primary</td>
+                <td>Distintas variantes del componente spinner.</td>
+                <td>hex, rgb o rgba</td>
+                <td>'#023E8A'</td>
+            </tr>
+            <tr>
+                <td>color-secondary</td>
+                <td>Color secundario del componente spinner.</td>
+                <td>hex, rgb o rgba</td>
+                <td>'#a7b3e9'</td>
+            </tr>
+            <tr>
+                <td>color-bola</td>
+                <td>Cadena con los colores de las bolas en tipo hex, rgb o rgba(Escribir todo junto y sin comillas como en el ejemplo de arriba).</td>
+                <td>hex, rgb o rgba</td>
+                <td>'#023E8A,#a7b3e9,
+                    #023E8A,#0096C7,
+                    #0077B6,#0096C7'</td>
             </tr>
         </tbody>
     </table>

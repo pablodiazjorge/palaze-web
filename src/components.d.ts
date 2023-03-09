@@ -60,6 +60,9 @@ export namespace Components {
         "verticalAlign": string;
     }
     interface PlzSpinner {
+        "colorPrimary": string;
+        "colorSecondary": string;
+        "colorsBola": string;
         "variant": string;
     }
     interface PlzTooltip {
@@ -211,6 +214,9 @@ declare namespace LocalJSX {
         "verticalAlign"?: string;
     }
     interface PlzSpinner {
+        "colorPrimary"?: string;
+        "colorSecondary"?: string;
+        "colorsBola"?: string;
         "variant"?: string;
     }
     interface PlzTooltip {
