@@ -1,9 +1,8 @@
-import { Component, h, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Host } from '@stencil/core';
 
-import hljs from 'highlight.js/lib/core';
-import xml from 'highlight.js/lib/languages/xml';
-
-//import 'highlight.js/styles/github.css';
+import hljs from 'highlight.js';
+import prettier from 'prettier/standalone';
+import parserHtml from 'prettier/parser-html';
 
 @Component({
   tag: 'plz-showcase-code',
@@ -12,29 +11,23 @@ import xml from 'highlight.js/lib/languages/xml';
 })
 export class PlzShowcaseCode {
   @Prop() textCode: string;
-  @Element() el: HTMLElement;
-
-  codeEl: HTMLElement;
+  private highlightedCode: string;
 
   componentWillLoad() {
-    hljs.registerLanguage('xml', xml);
-  }
-
-  componentDidLoad() {
-    this.codeEl = this.el.shadowRoot.querySelector('pre code') as HTMLElement;
-    let esc = this.codeEl.innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
-    this.codeEl.innerHTML = esc;
-    hljs.highlightElement(this.codeEl);
-    //hljs.highlight(`${this.textCode}`, {language: 'xml'}).value;
+    this.highlightedCode = hljs.highlight('html', this.textCode).value;
+    this.highlightedCode = prettier.format(this.highlightedCode, {
+      parser: 'html',
+      plugins: [parserHtml],
+    });
   }
 
   render() {
     return (
-      <div>
-        <pre class={'parent'}>
-          <code class="language-html" innerHTML={this.textCode}></code>
+      <Host>
+        <pre>
+          <code innerHTML={this.highlightedCode}></code>
         </pre>
-      </div>
+      </Host>
     );
   }
 }
