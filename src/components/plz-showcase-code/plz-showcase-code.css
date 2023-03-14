@@ -2,6 +2,7 @@
 @import '~highlight.js/styles/github.css';
 
 :host {
+  box-sizing: border-box;
   display: block;
   width: 100%;
   border: 1px solid #d4d4d8;

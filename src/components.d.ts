@@ -34,6 +34,14 @@ export namespace Components {
         "type": string;
         "variant": string;
     }
+    interface PlzFigure {
+        "alt": string;
+        "footer": string;
+        "header": string;
+        "height": number;
+        "src": string;
+        "width": number;
+    }
     interface PlzHeader {
         "color": string;
         "colorHover": string;
@@ -103,6 +111,12 @@ declare global {
         prototype: HTMLPlzDividerElement;
         new (): HTMLPlzDividerElement;
     };
+    interface HTMLPlzFigureElement extends Components.PlzFigure, HTMLStencilElement {
+    }
+    var HTMLPlzFigureElement: {
+        prototype: HTMLPlzFigureElement;
+        new (): HTMLPlzFigureElement;
+    };
     interface HTMLPlzHeaderElement extends Components.PlzHeader, HTMLStencilElement {
     }
     var HTMLPlzHeaderElement: {
@@ -162,6 +176,7 @@ declare global {
         "plz-card": HTMLPlzCardElement;
         "plz-colors": HTMLPlzColorsElement;
         "plz-divider": HTMLPlzDividerElement;
+        "plz-figure": HTMLPlzFigureElement;
         "plz-header": HTMLPlzHeaderElement;
         "plz-hero": HTMLPlzHeroElement;
         "plz-menu": HTMLPlzMenuElement;
@@ -201,6 +216,14 @@ declare namespace LocalJSX {
         "spaceTop"?: string;
         "type"?: string;
         "variant"?: string;
+    }
+    interface PlzFigure {
+        "alt"?: string;
+        "footer"?: string;
+        "header"?: string;
+        "height"?: number;
+        "src"?: string;
+        "width"?: number;
     }
     interface PlzHeader {
         "color"?: string;
@@ -250,6 +273,7 @@ declare namespace LocalJSX {
         "plz-card": PlzCard;
         "plz-colors": PlzColors;
         "plz-divider": PlzDivider;
+        "plz-figure": PlzFigure;
         "plz-header": PlzHeader;
         "plz-hero": PlzHero;
         "plz-menu": PlzMenu;
@@ -269,6 +293,7 @@ declare module "@stencil/core" {
             "plz-card": LocalJSX.PlzCard & JSXBase.HTMLAttributes<HTMLPlzCardElement>;
             "plz-colors": LocalJSX.PlzColors & JSXBase.HTMLAttributes<HTMLPlzColorsElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
+            "plz-figure": LocalJSX.PlzFigure & JSXBase.HTMLAttributes<HTMLPlzFigureElement>;
             "plz-header": LocalJSX.PlzHeader & JSXBase.HTMLAttributes<HTMLPlzHeaderElement>;
             "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
             "plz-menu": LocalJSX.PlzMenu & JSXBase.HTMLAttributes<HTMLPlzMenuElement>;

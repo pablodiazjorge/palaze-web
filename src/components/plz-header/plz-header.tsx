@@ -13,25 +13,36 @@ export class PlzHeader {
   @Prop() colorTextHover: string= ''
 
   render() {
-    return this.variant == 'right' ? (
+    return this.variant == 'right-hover' ? (
       <Host>
         <header class="header" style={{ '--color': `${this.color}`, '--color-text': `${this.colorText}`, '--color-hover': `${this.colorHover}`, '--color-text-hover': `${this.colorTextHover}`}}>
           <nav class="left">
             <slot name="left"></slot>
+          </nav>
+          <nav class="right">
+            <slot name="right-select"></slot>
+          </nav>
+        </header>
+      </Host>
+    ) : this.variant == 'left-hover' ? (
+      <Host>
+        <header class="header" style={{ '--color': `${this.color}`, '--color-text': `${this.colorText}`, '--color-hover': `${this.colorHover}`, '--color-text-hover': `${this.colorTextHover}`}}>
+          <nav class="left-select">
+            <slot name="left-select"></slot>
           </nav>
           <nav class="right">
             <slot name="right"></slot>
           </nav>
         </header>
       </Host>
-    ) : this.variant == 'left' ? (
+    ) : this.variant == 'both-hover' ? (
       <Host>
         <header class="header" style={{ '--color': `${this.color}`, '--color-text': `${this.colorText}`, '--color-hover': `${this.colorHover}`, '--color-text-hover': `${this.colorTextHover}`}}>
-          <nav class="left">
-            <slot name="left"></slot>
+          <nav class="left-select">
+            <slot name="left-select"></slot>
           </nav>
-          <nav class="right">
-            <slot name="right"></slot>
+          <nav class="right-select">
+            <slot name="right-select"></slot>
           </nav>
         </header>
       </Host>

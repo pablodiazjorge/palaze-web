@@ -11,30 +11,26 @@
   display: inline-flex;
   width: 100%;
   align-items: center;
-  z-index: 1;
   background-color: var(--color);
   top: 0;
   left: 0;
   height: 45px;
 }
 
-.header>* {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
 .header .right {
+  padding-right: 10px;
   display: flex;
   height: 100%;
   margin-left: auto;
 }
 .header .left {
+  padding-left: 10px;
   display: flex;
   height: 100%;
   margin-right: auto;
 }
 
-:host ::slotted([slot="right"]) {
+:host ::slotted([slot="right-select"]) {
   display: flex;
   align-items: center;
   height: 100%;
@@ -43,7 +39,22 @@
   padding-right: 10px;
 }
 
-:host ::slotted([slot="right"]:hover) {
+:host ::slotted([slot="right-select"]:hover) {
+  background-color: var(--color-hover);
+  color: var(--color-text-hover);
+  height: 100%;
+}
+
+:host ::slotted([slot="left-select"]) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--color-text);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+:host ::slotted([slot="left-select"]:hover) {
   background-color: var(--color-hover);
   color: var(--color-text-hover);
   height: 100%;
@@ -58,12 +69,20 @@
   padding-right: 10px;
 }
 
-:host ::slotted(a) {
-  text-decoration: none;
+:host ::slotted([slot="right"]) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--color-text);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-:host ::slotted(img) {
-  height: 40px;
-  width: 40px;
+:host ::slotted(a) {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+:host ::slotted([slot="left"]) img {
   vertical-align: middle;
 }
